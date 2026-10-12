@@ -60,13 +60,14 @@ const navigation = [
     menuItems: [
       "Annual Report",
       "Catalogue of NITRA",
+      "New Bulletin",
       "Publication",
       "Latest NITRA Books Publication",
       "Research Papers",
     ],
   },
-  { label: "TESTING", href: "#testing" },
-  { label: "NITRA NEWS", href: "#news" },
+  { label: "TESTING", href: "/quality-evaluation-and-testing-services/" },
+  { label: "NITRA NEWS", href: "/new-bulletin/" },
   {
     label: "INFRASTRUCTURE",
     href: "#infrastructure",
@@ -123,6 +124,9 @@ function SearchIcon() {
 function getAboutMenuHref(label) {
   if (label === "Annual Report") {
     return "/annual-report/";
+  }
+  if (label === "New Bulletin") {
+    return "/new-bulletin/";
   }
   if (label === "Catalogue of NITRA") {
     return "/catalogue-of-nitra-publication/";
