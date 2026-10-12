@@ -711,6 +711,822 @@ a:focus-visible {
   text-align: center;
 }
 
+.products-development-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.products-development-hero,
+.products-development-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.products-development-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.products-development-hero h1 {
+  font-size: clamp(38px, 5vw, 56px);
+  letter-spacing: -0.04em;
+}
+
+.products-development-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.products-development-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.products-development-content {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+.products-development-directory {
+  overflow: hidden;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.products-development-search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px;
+  color: #263e50;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.products-development-search input {
+  width: min(100%, 320px);
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #c8d3dd;
+  border-radius: 4px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+  font-weight: 400;
+}
+
+.products-development-table-wrap {
+  overflow-x: auto;
+}
+
+.products-development-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.products-development-table th,
+.products-development-table td {
+  padding: 15px 18px;
+  border-top: 1px solid #d7d7d7;
+  line-height: 1.5;
+}
+
+.products-development-table th {
+  color: #fff;
+  background: #1764a0;
+  font-size: 15px;
+}
+
+.products-development-table td {
+  color: #34495a;
+  background: #fff;
+  font-size: 15px;
+}
+
+.products-development-table tbody tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+.products-development-empty {
+  color: #596b79 !important;
+  text-align: center;
+}
+
+.products-development-result-count {
+  margin: 0;
+  padding: 12px 16px;
+  border-top: 1px solid #d7d7d7;
+  color: #596b79;
+  font-size: 13px;
+}
+
+.commercialization-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.commercialization-hero,
+.commercialization-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.commercialization-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.commercialization-hero h1 {
+  font-size: clamp(38px, 5vw, 56px);
+  letter-spacing: -0.04em;
+}
+
+.commercialization-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.commercialization-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.commercialization-content {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+.commercialization-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.commercialization-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.commercialization-table th,
+.commercialization-table td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #d7d7d7;
+  line-height: 1.55;
+}
+
+.commercialization-table th {
+  color: #fff;
+  background: #1764a0;
+  font-size: 15px;
+}
+
+.commercialization-table td {
+  color: #34495a;
+  background: #fff;
+  font-size: 15px;
+}
+
+.commercialization-table tbody tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+.commercialization-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.instruments-developed-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.instruments-developed-hero,
+.instruments-developed-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.instruments-developed-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.instruments-developed-hero h1 {
+  font-size: clamp(38px, 5vw, 56px);
+  letter-spacing: -0.04em;
+}
+
+.instruments-developed-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.instruments-developed-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.instruments-developed-content {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+.instruments-developed-directory {
+  overflow: hidden;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.instruments-developed-search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px;
+  color: #263e50;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.instruments-developed-search input {
+  width: min(100%, 320px);
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #c8d3dd;
+  border-radius: 4px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+  font-weight: 400;
+}
+
+.instruments-developed-table-wrap {
+  overflow-x: auto;
+}
+
+.instruments-developed-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.instruments-developed-table th,
+.instruments-developed-table td {
+  padding: 15px 18px;
+  border-top: 1px solid #d7d7d7;
+  line-height: 1.5;
+}
+
+.instruments-developed-table th {
+  color: #fff;
+  background: #1764a0;
+  font-size: 15px;
+}
+
+.instruments-developed-table td {
+  color: #34495a;
+  background: #fff;
+  font-size: 15px;
+}
+
+.instruments-developed-table tbody tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+.instruments-developed-empty {
+  color: #596b79 !important;
+  text-align: center;
+}
+
+.instruments-developed-result-count {
+  margin: 0;
+  padding: 12px 16px;
+  border-top: 1px solid #d7d7d7;
+  color: #596b79;
+  font-size: 13px;
+}
+
+.patents-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.patents-hero,
+.patents-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.patents-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.patents-hero h1 {
+  font-size: clamp(38px, 5vw, 56px);
+  letter-spacing: -0.04em;
+}
+
+.patents-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.patents-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.patents-content {
+  display: grid;
+  width: min(100% - 48px, 1180px);
+  gap: 36px;
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+.patent-section h2 {
+  margin: 0 0 16px;
+  color: #68b8e4;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.2;
+}
+
+.patent-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.patent-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.patent-table th,
+.patent-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #d7d7d7;
+  vertical-align: top;
+}
+
+.patent-table th {
+  color: #fff;
+  background: #1764a0;
+  font-size: 15px;
+}
+
+.patent-table td {
+  color: #34495a;
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.patent-table tbody tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+.patent-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.patent-table td:first-child {
+  width: 76px;
+  white-space: nowrap;
+}
+
+.consultancy-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.consultancy-hero,
+.consultancy-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.consultancy-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.consultancy-hero h1 {
+  font-size: clamp(38px, 5vw, 56px);
+  letter-spacing: -0.04em;
+}
+
+.consultancy-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.consultancy-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.consultancy-content {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 42px 0 48px;
+}
+
+.consultancy-intro {
+  margin: 0 0 28px;
+  color: #34495a;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.consultancy-services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.consultancy-service-card {
+  overflow: hidden;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.consultancy-service-card:first-child {
+  grid-row: span 4;
+}
+
+.consultancy-service-title {
+  margin: 0;
+  padding: 16px 18px;
+  color: #fff;
+  background: #1764a0;
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.consultancy-service-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.consultancy-service-card li {
+  padding: 13px 18px;
+  border-top: 1px solid #e1e6eb;
+  color: #34495a;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.consultancy-service-card li:nth-child(even) {
+  background: #f7fafc;
+}
+
+.third-party-inspection-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.third-party-inspection-hero,
+.third-party-inspection-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.third-party-inspection-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.third-party-inspection-hero h1 {
+  font-size: clamp(38px, 5vw, 56px);
+  letter-spacing: -0.04em;
+}
+
+.third-party-inspection-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.third-party-inspection-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.third-party-inspection-content {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 42px 0;
+}
+
+.third-party-inspection-content p {
+  margin: 0;
+  color: #34495a;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.job-programs-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.job-programs-hero,
+.job-programs-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.job-programs-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.job-programs-hero h1 {
+  font-size: clamp(34px, 4.4vw, 52px);
+  letter-spacing: -0.04em;
+}
+
+.job-programs-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.job-programs-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.job-programs-documents {
+  display: grid;
+  width: min(100% - 48px, 1180px);
+  gap: 28px;
+  margin: 0 auto;
+  padding: 42px 0 56px;
+}
+
+.job-programs-document-group h2 {
+  margin: 0;
+  padding: 14px 16px;
+  color: #fff;
+  background: #1764a0;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.job-programs-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #d7d7d7;
+  border-top: 0;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.job-programs-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.job-programs-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #d7d7d7;
+  color: #34495a;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.job-programs-table tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+.job-programs-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.job-programs-table td:last-child {
+  width: 180px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.job-programs-table a {
+  color: #1764a0;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.research-projects-hero,
+.research-projects-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.research-projects-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.research-projects-hero h1 {
+  font-size: clamp(38px, 5vw, 56px);
+  letter-spacing: -0.04em;
+}
+
+.research-projects-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.research-projects-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.research-projects-content {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 44px 0 48px;
+}
+
+.research-projects-heading {
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.research-projects-heading .about-kicker {
+  margin-bottom: 8px;
+}
+
+.research-projects-heading h2 {
+  margin: 0 0 14px;
+  color: var(--navy);
+  font-size: clamp(26px, 3.5vw, 38px);
+  line-height: 1.2;
+}
+
+.research-projects-heading > span {
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin: 0 auto;
+  background: var(--accent);
+}
+
+.research-project-directory {
+  overflow: hidden;
+  border: 1px solid #d7e0e8;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgb(9 33 52 / 7%);
+}
+
+.research-project-controls {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px;
+  border-bottom: 1px solid #d7e0e8;
+  background: #f8fafc;
+}
+
+.research-project-controls label {
+  display: grid;
+  min-width: 180px;
+  gap: 7px;
+  color: #33485a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.research-project-controls input,
+.research-project-controls select {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 11px;
+  border: 1px solid #c8d3dd;
+  border-radius: 5px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+  font-weight: 400;
+}
+
+.research-project-table-wrap {
+  overflow-x: auto;
+}
+
+.research-project-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.research-project-table th,
+.research-project-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8ee;
+  vertical-align: top;
+}
+
+.research-project-table th {
+  color: #fff;
+  background: #12608e;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.research-project-table td {
+  color: #34495a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.research-project-table tbody tr:nth-child(even) {
+  background: #f7fafc;
+}
+
+.research-project-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.research-project-table td:first-child,
+.research-project-table td:nth-child(3) {
+  white-space: nowrap;
+}
+
+.research-project-table td a {
+  color: #1764a0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.research-project-unavailable {
+  color: #697987;
+  font-size: 13px;
+}
+
+.research-project-empty {
+  padding: 28px !important;
+  text-align: center;
+}
+
+.research-project-result-count {
+  margin: 0;
+  padding: 12px 18px;
+  border-top: 1px solid #e2e8ee;
+  color: #596b79;
+  font-size: 13px;
+}
+
+.research-annual-reports {
+  margin: 52px 0 0;
+}
+
+.research-annual-reports ul {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d7d7d7;
+  list-style: none;
+}
+
+.research-annual-reports li + li {
+  border-top: 1px solid #d7d7d7;
+}
+
+.research-annual-reports a {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  color: #1764a0;
+  background: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.research-annual-reports a:hover {
+  background: #f3f8fb;
+}
+
 .who-page-profile {
   min-height: 380px;
   padding-top: 42px;
@@ -1177,6 +1993,84 @@ a:focus-visible {
   .vision-content {
     width: min(100% - 28px, 1180px);
     padding: 30px 0 48px;
+  }
+
+  .research-projects-content {
+    width: min(100% - 28px, 1180px);
+    padding: 30px 0 44px;
+  }
+
+  .products-development-content {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0 44px;
+  }
+
+  .commercialization-content {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0 44px;
+  }
+
+  .instruments-developed-content {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0 44px;
+  }
+
+  .patents-content {
+    width: min(100% - 28px, 1180px);
+    gap: 28px;
+    padding: 28px 0 44px;
+  }
+
+  .consultancy-content {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0 40px;
+  }
+
+  .third-party-inspection-content {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0;
+  }
+
+  .job-programs-documents {
+    width: min(100% - 28px, 1180px);
+    gap: 22px;
+    padding: 28px 0 40px;
+  }
+
+  .consultancy-services {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .consultancy-service-card:first-child {
+    grid-row: auto;
+  }
+
+  .research-project-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .research-project-controls label {
+    min-width: 0;
+  }
+
+  .products-development-search {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .products-development-search input {
+    width: 100%;
+  }
+
+  .instruments-developed-search {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .instruments-developed-search input {
+    width: 100%;
   }
 
   .vision-statement {

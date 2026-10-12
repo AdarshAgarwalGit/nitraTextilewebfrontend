@@ -32,7 +32,24 @@ const navigation = [
       },
       "Integrated Textile & Apparel Development Centre (ITADC)",
       "Consultancy",
-      "Training Programs",
+      {
+        label: "Training Programs",
+        children: [
+          {
+            label: "Job Oriented Professional Programs for 2026-27",
+            href: "/job-oriented-professional-programs/",
+          },
+          {
+            label: "Fundamental Course on Protech",
+            href: "https://nitratextile.org/wp-content/uploads/2026/01/Fundamental-Course-on-Protech_20250919_184149_0000.pdf",
+            target: "_blank",
+          },
+          {
+            label: "Training Programmes at NITRA",
+            href: "https://nitratextile.org/training-programmes-at-nitra/",
+          },
+        ],
+      },
       "Third Party Inspection",
     ],
   },
@@ -104,6 +121,27 @@ function SearchIcon() {
 }
 
 function getAboutMenuHref(label) {
+  if (label === "R & D Projects") {
+    return "/research-develpment-projects/";
+  }
+  if (label === "Products Development") {
+    return "/products_development/";
+  }
+  if (label === "Commercialization of NITRA Developments") {
+    return "/Commercialization%20of%20NITRA%20Developments/";
+  }
+  if (label === "Instruments Developed") {
+    return "/Instruments-20Developed/";
+  }
+  if (label === "Patent Obtained and Filed") {
+    return "/patents-obtained-and-filed/";
+  }
+  if (label === "Consultancy") {
+    return "/consultancy/";
+  }
+  if (label === "Third Party Inspection") {
+    return "/third-party-inspection/";
+  }
   if (label === "Council of Administration") {
     return "/PDF/MEMBERS-OF-THE-COUNCIL-OF-ADMINISTRATION-2025-2026.pdf";
   }
@@ -194,8 +232,22 @@ export default function Header() {
                             aria-label={`${menuItem.label} submenu`}
                           >
                             {menuItem.children.map((child) => (
-                              <li key={child}>
-                                <a href="/about-us">{child}</a>
+                              <li key={typeof child === "string" ? child : child.label}>
+                                <a
+                                  href={
+                                    typeof child === "string"
+                                      ? getAboutMenuHref(child)
+                                      : child.href
+                                  }
+                                  target={typeof child === "string" ? undefined : child.target}
+                                  rel={
+                                    typeof child !== "string" && child.target === "_blank"
+                                      ? "noopener noreferrer"
+                                      : undefined
+                                  }
+                                >
+                                  {typeof child === "string" ? child : child.label}
+                                </a>
                               </li>
                             ))}
                           </ul>
