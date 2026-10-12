@@ -41,12 +41,12 @@ const navigation = [
           },
           {
             label: "Fundamental Course on Protech",
-            href: "https://nitratextile.org/wp-content/uploads/2026/01/Fundamental-Course-on-Protech_20250919_184149_0000.pdf",
+            href: "/PDF/Fundamental-Course-on-Protech_20250919_184149_0000.pdf",
             target: "_blank",
           },
           {
             label: "Training Programmes at NITRA",
-            href: "https://nitratextile.org/training-programmes-at-nitra/",
+            href: "/training-programmes-at-nitra/",
           },
         ],
       },
@@ -121,6 +121,18 @@ function SearchIcon() {
 }
 
 function getAboutMenuHref(label) {
+  if (label === "Annual Report") {
+    return "/annual-report/";
+  }
+  if (label === "Catalogue of NITRA") {
+    return "/catalogue-of-nitra-publication/";
+  }
+  if (label === "Latest NITRA Books Publication") {
+    return "/latest-nitra-books-publication/";
+  }
+  if (label === "Research Papers") {
+    return "/research-papers/";
+  }
   if (label === "R & D Projects") {
     return "/research-develpment-projects/";
   }

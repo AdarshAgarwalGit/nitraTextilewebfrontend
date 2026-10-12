@@ -1330,6 +1330,502 @@ a:focus-visible {
   text-underline-offset: 3px;
 }
 
+.nitra-training-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.nitra-training-hero,
+.nitra-training-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.nitra-training-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.nitra-training-hero h1 {
+  font-size: clamp(36px, 4.5vw, 54px);
+  letter-spacing: -0.04em;
+}
+
+.nitra-training-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.nitra-training-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.nitra-training-programmes {
+  display: grid;
+  width: min(100% - 48px, 1180px);
+  gap: 28px;
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+.nitra-training-card {
+  padding: 24px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.nitra-training-card-header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8ee;
+}
+
+.nitra-training-card-header h2 {
+  margin: 0;
+  color: #1764a0;
+  font-size: clamp(21px, 2.6vw, 28px);
+  line-height: 1.3;
+}
+
+.nitra-training-status {
+  flex: 0 0 auto;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.nitra-training-status-upcoming {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.nitra-training-status-completed {
+  color: #596579;
+  background: #eef1f5;
+}
+
+.nitra-training-meta,
+.nitra-training-footer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 24px;
+  margin: 0;
+  padding: 18px 0;
+}
+
+.nitra-training-meta > div,
+.nitra-training-footer > div {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.nitra-training-meta dt,
+.nitra-training-footer dt {
+  flex: 0 0 auto;
+  color: #173b58;
+  font-weight: 700;
+}
+
+.nitra-training-meta dd,
+.nitra-training-footer dd {
+  margin: 0;
+  color: #34495a;
+  line-height: 1.6;
+}
+
+.nitra-training-detail {
+  padding: 12px 0 6px;
+}
+
+.nitra-training-detail h3 {
+  margin: 0 0 8px;
+  color: #1764a0;
+  font-size: 17px;
+}
+
+.nitra-training-detail ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 28px;
+  margin: 0;
+  padding-left: 22px;
+  color: #34495a;
+  line-height: 1.6;
+}
+
+.nitra-training-detail li::marker {
+  color: #1764a0;
+}
+
+.nitra-training-footer {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 12px;
+  padding: 16px;
+  background: #f5f8fb;
+}
+
+.annual-report-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.annual-report-hero,
+.annual-report-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.annual-report-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.annual-report-hero h1 {
+  font-size: clamp(38px, 5vw, 56px);
+  letter-spacing: -0.04em;
+}
+
+.annual-report-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.annual-report-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.annual-report-content {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+.annual-report-content h2 {
+  margin: 0 0 20px;
+  color: #1764a0;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.2;
+}
+
+.annual-report-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.annual-report-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.annual-report-table th,
+.annual-report-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.annual-report-table th {
+  color: #fff;
+  background: #1764a0;
+  font-size: 15px;
+}
+
+.annual-report-table td {
+  color: #34495a;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.annual-report-table tbody tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+.annual-report-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.annual-report-table th:nth-child(2),
+.annual-report-table td:nth-child(2) {
+  width: 120px;
+}
+
+.annual-report-table th:last-child,
+.annual-report-table td:last-child {
+  width: 190px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.annual-report-table a {
+  color: #1764a0;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.nitra-catalogue-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.nitra-catalogue-hero,
+.nitra-catalogue-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.nitra-catalogue-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.nitra-catalogue-hero h1 {
+  font-size: clamp(36px, 4.5vw, 54px);
+  letter-spacing: -0.04em;
+}
+
+.nitra-catalogue-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.nitra-catalogue-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.nitra-catalogue-content {
+  display: grid;
+  width: min(100% - 48px, 1180px);
+  gap: 16px;
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+.nitra-catalogue-viewer {
+  width: 100%;
+  height: min(82vh, 1000px);
+  min-height: 640px;
+  border: 1px solid #d7d7d7;
+  background: #eef1f5;
+}
+
+.nitra-catalogue-download {
+  justify-self: end;
+  color: #1764a0;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.latest-books-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.latest-books-hero,
+.latest-books-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.latest-books-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.latest-books-hero h1 {
+  font-size: clamp(36px, 4.5vw, 54px);
+  letter-spacing: -0.04em;
+}
+
+.latest-books-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.latest-books-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.latest-books-content {
+  display: grid;
+  width: min(100% - 48px, 1180px);
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.6fr);
+  gap: 32px;
+  align-items: start;
+  margin: 0 auto;
+  padding: 48px 0 64px;
+}
+
+.latest-books-feature {
+  overflow: hidden;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 8%);
+}
+
+.latest-books-feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.latest-books-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.latest-book-card {
+  padding: 20px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 6px 18px rgb(9 33 52 / 5%);
+}
+
+.latest-book-card h2 {
+  margin: 0 0 10px;
+  color: #1764a0;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.latest-book-card p {
+  margin: 0 0 14px;
+  color: #34495a;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.latest-book-unavailable {
+  display: inline-block;
+  padding-top: 10px;
+  border-top: 1px solid #e2e8ee;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.research-papers-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.research-papers-hero,
+.research-papers-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.research-papers-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.research-papers-hero h1 {
+  font-size: clamp(38px, 5vw, 56px);
+  letter-spacing: -0.04em;
+}
+
+.research-papers-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.research-papers-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.research-papers-content {
+  display: grid;
+  width: min(100% - 48px, 1180px);
+  gap: 36px;
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+.research-papers-year h2 {
+  margin: 0 0 16px;
+  color: #1764a0;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.2;
+}
+
+.research-papers-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.research-papers-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.research-papers-table th,
+.research-papers-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #d7d7d7;
+  vertical-align: top;
+}
+
+.research-papers-table th {
+  color: #fff;
+  background: #1764a0;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.research-papers-table td {
+  color: #34495a;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.research-papers-table tbody tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+.research-papers-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.research-papers-table td:first-child {
+  width: 76px;
+  text-align: center;
+}
+
+.research-papers-table td:nth-child(2) {
+  min-width: 240px;
+}
+
+.research-papers-table td:nth-child(3) {
+  min-width: 190px;
+}
+
+.research-papers-table td:nth-child(4) {
+  min-width: 300px;
+}
+
+.research-papers-table td:last-child {
+  min-width: 145px;
+}
+
 .research-projects-hero,
 .research-projects-hero .about-hero-inner {
   min-height: 250px;
@@ -2035,6 +2531,56 @@ a:focus-visible {
     width: min(100% - 28px, 1180px);
     gap: 22px;
     padding: 28px 0 40px;
+  }
+
+  .nitra-training-programmes {
+    width: min(100% - 28px, 1180px);
+    gap: 18px;
+    padding: 28px 0 40px;
+  }
+
+  .annual-report-content {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0 40px;
+  }
+
+  .nitra-catalogue-content {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0 40px;
+  }
+
+  .nitra-catalogue-viewer {
+    height: 72vh;
+    min-height: 480px;
+  }
+
+  .latest-books-content {
+    width: min(100% - 28px, 1180px);
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 28px 0 40px;
+  }
+
+  .research-papers-content {
+    width: min(100% - 28px, 1180px);
+    gap: 26px;
+    padding: 28px 0 40px;
+  }
+
+  .latest-books-feature {
+    width: min(100%, 420px);
+    margin: 0 auto;
+  }
+
+  .nitra-training-card {
+    padding: 18px;
+  }
+
+  .nitra-training-meta,
+  .nitra-training-detail ul,
+  .nitra-training-footer,
+  .latest-books-list {
+    grid-template-columns: 1fr;
   }
 
   .consultancy-services {
