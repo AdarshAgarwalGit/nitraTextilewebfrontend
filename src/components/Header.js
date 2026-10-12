@@ -20,7 +20,16 @@ const navigation = [
     href: "#services",
     hasMenu: true,
     menuItems: [
-      "Research & Development",
+      {
+        label: "Research & Development",
+        children: [
+          "R & D Projects",
+          "Products Development",
+          "Commercialization of NITRA Developments",
+          "Instruments Developed",
+          "Patent Obtained and Filed",
+        ],
+      },
       "Integrated Textile & Apparel Development Centre (ITADC)",
       "Consultancy",
       "Training Programs",
@@ -94,6 +103,39 @@ function SearchIcon() {
   );
 }
 
+function getAboutMenuHref(label) {
+  if (label === "Council of Administration") {
+    return "/PDF/MEMBERS-OF-THE-COUNCIL-OF-ADMINISTRATION-2025-2026.pdf";
+  }
+  if (label === "Finance & Admin Committee") {
+    return "/PDF/LIST-OF-MEMBERS-OF-FINANCE-amp-ADMINISTRATIVE-SUB-COMMITTEE-2025-26.pdf";
+  }
+  if (label === "Research Advisory Committee") {
+    return "/PDF/MEMBERS-OF-THE-RESEARCH-ADVISORY-COMMITTEE-2025-2026.pdf";
+  }
+  if (label === "Organization Structure") {
+    return "/organization-structure/";
+  }
+  if (label === "Quality Policy") {
+    return "/quality-policy/";
+  }
+  if (label === "Vision") {
+    return "/vision/";
+  }
+  if (label === "Who’s who") {
+    return "/intellectual-capital-2/";
+  }
+  return "/about-us";
+}
+
+function opensInNewTab(label) {
+  return [
+    "Council of Administration",
+    "Finance & Admin Committee",
+    "Research Advisory Committee",
+  ].includes(label);
+}
+
 export default function Header() {
   return (
     <header className="site-header" id="home">
@@ -114,8 +156,50 @@ export default function Header() {
                 <div className="nav-dropdown" aria-label={`${item.label} submenu`}>
                   <ul className="nav-dropdown-list">
                     {item.menuItems.map((menuItem) => (
-                      <li key={menuItem}>
-                        <a href="/about-us">{menuItem}</a>
+                      <li
+                        className={
+                          typeof menuItem === "string" ? undefined : "nav-submenu-item"
+                        }
+                        key={typeof menuItem === "string" ? menuItem : menuItem.label}
+                      >
+                        <a
+                          href={getAboutMenuHref(
+                            typeof menuItem === "string" ? menuItem : menuItem.label,
+                          )}
+                          target={
+                            opensInNewTab(
+                              typeof menuItem === "string" ? menuItem : menuItem.label,
+                            )
+                              ? "_blank"
+                              : undefined
+                          }
+                          rel={
+                            opensInNewTab(
+                              typeof menuItem === "string" ? menuItem : menuItem.label,
+                            )
+                              ? "noopener noreferrer"
+                              : undefined
+                          }
+                        >
+                          {typeof menuItem === "string" ? menuItem : menuItem.label}
+                          {typeof menuItem === "string" ? null : (
+                            <span className="nav-submenu-arrow" aria-hidden="true">
+                              ›
+                            </span>
+                          )}
+                        </a>
+                        {typeof menuItem !== "string" && (
+                          <ul
+                            className="nav-dropdown nav-submenu-dropdown"
+                            aria-label={`${menuItem.label} submenu`}
+                          >
+                            {menuItem.children.map((child) => (
+                              <li key={child}>
+                                <a href="/about-us">{child}</a>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </li>
                     ))}
                   </ul>

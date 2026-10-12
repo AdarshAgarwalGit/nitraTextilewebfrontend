@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" fill="none">
+  <defs>
+    <linearGradient id="background" x1="70" y1="20" x2="1120" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1FAFF"/>
+      <stop offset="1" stop-color="#E5F3FA"/>
+    </linearGradient>
+    <linearGradient id="globe" x1="704" y1="85" x2="1002" y2="386" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24A8D5"/>
+      <stop offset="1" stop-color="#07558C"/>
+    </linearGradient>
+    <clipPath id="globeClip">
+      <circle cx="852" cy="235" r="146"/>
+    </clipPath>
+  </defs>
+  <rect width="1200" height="480" rx="28" fill="url(#background)"/>
+  <circle cx="852" cy="235" r="160" fill="#D2EDF8"/>
+  <circle cx="852" cy="235" r="146" fill="url(#globe)"/>
+  <g clip-path="url(#globeClip)" stroke="#D8F7FF" stroke-linecap="round" stroke-width="5">
+    <path d="M675 202c72-51 136-50 210-4 66 41 132 36 208-13"/>
+    <path d="M681 252c70-45 135-43 208 1 68 41 132 36 202-8"/>
+    <path d="M706 303c59-33 119-31 184 5 60 34 112 31 168-2"/>
+    <path d="M755 120c30 47 44 87 43 125-1 50-23 96-65 142"/>
+    <path d="M825 91c19 52 28 100 26 145-2 53-13 103-34 151"/>
+    <path d="M895 93c-16 48-23 96-21 143 2 56 14 105 39 149"/>
+    <path d="M963 123c-34 43-51 83-52 122-1 51 20 98 61 143"/>
+  </g>
+  <g fill="#C94E53">
+    <circle cx="831" cy="204" r="7"/>
+    <circle cx="899" cy="258" r="7"/>
+    <circle cx="797" cy="286" r="7"/>
+    <circle cx="919" cy="176" r="7"/>
+    <circle cx="850" cy="334" r="7"/>
+  </g>
+  <g stroke="#C94E53" stroke-linecap="round" stroke-width="4">
+    <path d="m831 204 68 54-102 28 53 48 69-158-68 28-51 82"/>
+    <path d="m760 166 71 38 49-81m19 135 55 46"/>
+  </g>
+  <g fill="#07558C">
+    <circle cx="181" cy="148" r="6"/>
+    <circle cx="279" cy="328" r="6"/>
+    <circle cx="525" cy="112" r="6"/>
+    <circle cx="1077" cy="348" r="6"/>
+  </g>
+  <g stroke="#93CFE4" stroke-linecap="round" stroke-width="3">
+    <path d="M181 148h144l70 70h157"/>
+    <path d="M279 328h177l62-62h174"/>
+    <path d="M525 112h91l64 64"/>
+    <path d="M996 317h81v31"/>
+    <path d="M134 235h88l51-51h120"/>
+  </g>
+  <g fill="#93CFE4">
+    <circle cx="325" cy="148" r="5"/>
+    <circle cx="552" cy="218" r="5"/>
+    <circle cx="456" cy="328" r="5"/>
+    <circle cx="680" cy="176" r="5"/>
+    <circle cx="1077" cy="348" r="5"/>
+  </g>
+</svg>
