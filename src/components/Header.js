@@ -61,7 +61,6 @@ const navigation = [
       "Annual Report",
       "Catalogue of NITRA",
       "New Bulletin",
-      "Publication",
       "Latest NITRA Books Publication",
       "Research Papers",
     ],
@@ -76,7 +75,6 @@ const navigation = [
       "Workshops",
       "Focus Incubation Centre",
       "Library",
-      "Laboratory",
     ],
   },
   {
