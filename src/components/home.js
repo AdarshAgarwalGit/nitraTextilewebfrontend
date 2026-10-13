@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import Header from "./Header";
+import HomeSlideshow from "./HomeSlideshow";
 import Image from "next/image";
 
 const newsItems = [
@@ -58,7 +59,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </section>       
 
         <section className="home-intro" aria-labelledby="home-title">
           <div className="home-image-wrap">
@@ -121,6 +122,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <HomeSlideshow />
       </main>
       <Footer />
     </>
