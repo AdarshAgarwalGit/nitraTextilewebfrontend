@@ -156,6 +156,12 @@ function getAboutMenuHref(label) {
   if (label === "Third Party Inspection") {
     return "/third-party-inspection/";
   }
+  if (label === "Workshops") {
+    return "/workshops/";
+  }
+  if (label === "Focus Incubation Centre") {
+    return "/focus-incubation-centre/";
+  }
   if (label === "Council of Administration") {
     return "/PDF/MEMBERS-OF-THE-COUNCIL-OF-ADMINISTRATION-2025-2026.pdf";
   }

@@ -1330,6 +1330,227 @@ a:focus-visible {
   text-underline-offset: 3px;
 }
 
+.workshops-inventory {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+.workshops-intro {
+  margin-bottom: 34px;
+}
+
+.workshops-intro h2 {
+  margin: 0 0 14px;
+  color: var(--navy);
+  font-size: clamp(25px, 3.2vw, 36px);
+  line-height: 1.2;
+}
+
+.workshops-intro p,
+.workshops-note {
+  margin: 0;
+  color: #34495a;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.workshops-group {
+  margin-top: 34px;
+}
+
+.workshops-group > h2 {
+  margin: 0 0 16px;
+  padding: 0 0 11px;
+  border-bottom: 2px solid #1764a0;
+  color: #1764a0;
+  font-size: clamp(20px, 2.6vw, 27px);
+  line-height: 1.3;
+}
+
+.workshops-subsection {
+  margin-top: 22px;
+}
+
+.workshops-subsection h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.workshops-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.workshops-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.workshops-table th {
+  padding: 14px 16px;
+  border-right: 1px solid rgb(255 255 255 / 35%);
+  color: #fff;
+  background: #1764a0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.workshops-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e1e6eb;
+  color: #34495a;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.workshops-table tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+.workshops-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.workshops-table th:first-child,
+.workshops-table td:first-child {
+  width: 90px;
+}
+
+.workshops-table th:last-child,
+.workshops-table td:last-child {
+  width: 220px;
+}
+
+.workshops-note {
+  margin-top: 14px;
+  font-style: italic;
+}
+
+.fic-hero,
+.fic-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.fic-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.fic-hero h1 {
+  font-size: clamp(36px, 4.5vw, 54px);
+  letter-spacing: -0.04em;
+}
+
+.fic-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.fic-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.fic-content {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+.fic-intro,
+.fic-section > p {
+  margin: 0;
+  color: #34495a;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.fic-intro {
+  margin-bottom: 30px;
+}
+
+.fic-section {
+  margin-top: 30px;
+}
+
+.fic-section h2 {
+  margin: 0 0 12px;
+  color: #1764a0;
+  font-size: clamp(21px, 2.6vw, 28px);
+  line-height: 1.35;
+}
+
+.fic-section > p {
+  margin-bottom: 14px;
+}
+
+.fic-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.fic-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.fic-table th {
+  padding: 14px 16px;
+  border-right: 1px solid rgb(255 255 255 / 35%);
+  color: #fff;
+  background: #1764a0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.fic-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e1e6eb;
+  color: #34495a;
+  font-size: 14px;
+  line-height: 1.55;
+  vertical-align: top;
+}
+
+.fic-table tbody tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+.fic-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.fic-table td:first-child,
+.fic-table th:first-child {
+  width: 72px;
+  text-align: center;
+}
+
+.fic-table td:nth-last-child(2),
+.fic-table th:nth-last-child(2) {
+  width: 105px;
+}
+
+.fic-table td:last-child ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.fic-table td:last-child li + li {
+  margin-top: 3px;
+}
+
 .nitra-training-hero {
   background:
     linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
@@ -2771,6 +2992,24 @@ a:focus-visible {
     width: min(100% - 28px, 1180px);
     gap: 22px;
     padding: 28px 0 40px;
+  }
+
+  .workshops-inventory {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0 44px;
+  }
+
+  .workshops-table {
+    min-width: 620px;
+  }
+
+  .fic-content {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0 40px;
+  }
+
+  .fic-table {
+    min-width: 820px;
   }
 
   .nitra-training-programmes {
