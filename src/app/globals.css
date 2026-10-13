@@ -1877,6 +1877,145 @@ a:focus-visible {
   opacity: 1;
 }
 
+.tenders-hero,
+.tenders-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.tenders-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.tenders-hero h1 {
+  font-size: clamp(36px, 4.5vw, 54px);
+  letter-spacing: -0.04em;
+}
+
+.tenders-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.tenders-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tenders-content {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 38px 0 68px;
+}
+
+.tenders-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.tenders-search label {
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tenders-search input {
+  width: min(100%, 360px);
+  min-height: 42px;
+  padding: 9px 13px;
+  border: 1px solid #cfd7df;
+  border-radius: 4px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+  font-size: 14px;
+}
+
+.tenders-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #e0e5e9;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 8%);
+}
+
+.tenders-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  color: #17212b;
+  font-size: 15px;
+  text-align: left;
+}
+
+.tenders-table th,
+.tenders-table td {
+  padding: 13px 16px;
+  line-height: 1.55;
+  vertical-align: top;
+}
+
+.tenders-table thead tr {
+  color: #fff;
+  background: #008f74;
+}
+
+.tenders-table th {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tenders-table th:first-child,
+.tenders-table td:first-child {
+  width: 58%;
+}
+
+.tenders-table th:nth-child(2),
+.tenders-table td:nth-child(2) {
+  width: 21%;
+}
+
+.tenders-table th:last-child,
+.tenders-table td:last-child {
+  width: 21%;
+}
+
+.tenders-table tbody tr {
+  border-bottom: 1px solid #dce2e6;
+}
+
+.tenders-table tbody tr:nth-child(even) {
+  background: #f3f6f5;
+}
+
+.tenders-table tbody tr:last-child {
+  border-bottom: 2px solid #008f74;
+}
+
+.tender-document-link {
+  color: #122b3d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tender-document-link:hover,
+.tender-document-link:focus-visible {
+  color: #006f59;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tender-document-link span {
+  color: #008f74;
+  font-size: 13px;
+}
+
+.tenders-empty {
+  color: #526170;
+  text-align: center;
+}
+
 .nitra-training-hero {
   background:
     linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
@@ -3388,6 +3527,27 @@ a:focus-visible {
 
   .careers-gallery-item {
     margin-bottom: 18px;
+  }
+
+  .tenders-content {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0 40px;
+  }
+
+  .tenders-search {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tenders-search input {
+    width: 100%;
+  }
+
+  .tenders-table th,
+  .tenders-table td {
+    padding: 10px;
+    font-size: 14px;
   }
 
   .nitra-training-programmes {

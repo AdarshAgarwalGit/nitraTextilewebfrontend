@@ -168,6 +168,9 @@ function getAboutMenuHref(label) {
   if (label === "Careers") {
     return "/careers/";
   }
+  if (label === "Tenders") {
+    return "/tenders/";
+  }
   if (label === "Council of Administration") {
     return "/PDF/MEMBERS-OF-THE-COUNCIL-OF-ADMINISTRATION-2025-2026.pdf";
   }
