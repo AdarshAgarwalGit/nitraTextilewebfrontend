@@ -45,6 +45,119 @@ a:focus-visible {
   box-shadow: 0 1px 0 #dfeaf3;
 }
 
+.utility-bar {
+  color: #fff;
+  background: #2878bd;
+}
+
+.utility-inner {
+  display: flex;
+  width: min(100% - 48px, 1160px);
+  min-height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.utility-contact,
+.utility-right,
+.utility-contact a,
+.utility-campus-badge,
+.utility-links {
+  display: flex;
+  align-items: center;
+}
+
+.utility-contact {
+  gap: clamp(16px, 2vw, 28px);
+}
+
+.utility-contact a {
+  flex: 0 0 auto;
+  gap: 9px;
+  white-space: nowrap;
+}
+
+.utility-contact a:hover,
+.utility-contact a:focus-visible,
+.utility-links a:hover,
+.utility-links a:focus-visible {
+  color: #e2f1ff;
+}
+
+.utility-contact svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.utility-logo-download {
+  font-weight: 700;
+}
+
+.utility-right {
+  flex: 0 0 auto;
+  gap: 18px;
+}
+
+.utility-campus-badge {
+  min-height: 28px;
+  gap: 8px;
+  padding: 0 11px;
+  border: 1px solid #d4dce5;
+  border-radius: 999px;
+  color: #101820;
+  background: #fff;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.utility-campus-dot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #21bd66;
+  box-shadow: 0 0 0 1px #21bd66;
+}
+
+.utility-links {
+  gap: 17px;
+}
+
+.utility-follow-label {
+  white-space: nowrap;
+}
+
+.utility-links a {
+  display: grid;
+  width: 15px;
+  height: 20px;
+  flex: 0 0 auto;
+  place-items: center;
+}
+
+.utility-links svg {
+  display: block;
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.utility-links svg[fill="none"] {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
 .primary-bar {
   display: flex;
   width: min(100% - 48px, 1320px);
@@ -3898,9 +4011,27 @@ a:focus-visible {
 }
 
 @media (max-width: 1050px) {
-  .utility-inner,
   .primary-bar {
     width: min(100% - 32px, 1320px);
+  }
+
+  .utility-inner {
+    width: min(100% - 32px, 1160px);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 22px;
+    padding: 9px 0;
+  }
+
+  .utility-contact {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 18px;
+  }
+
+  .utility-right {
+    justify-content: center;
+    gap: 14px;
   }
 
   .primary-bar {
@@ -3932,40 +4063,27 @@ a:focus-visible {
 @media (max-width: 650px) {
   .utility-inner {
     width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0;
-    padding: 8px 12px;
-    font-size: 11px;
-  }
-
-  .institute-note {
-    width: 100%;
-    padding: 0 0 7px;
-    text-align: center;
+    gap: 9px;
+    padding: 10px 12px;
+    font-size: 12px;
   }
 
   .utility-contact,
-  .utility-links {
+  .utility-right {
     justify-content: center;
   }
 
-  .utility-contact a,
-  .utility-links a {
-    padding: 0 8px;
+  .utility-contact {
+    gap: 8px 16px;
   }
 
-  .utility-contact a:first-child {
-    border-left: 0;
+  .utility-right {
+    flex-wrap: wrap;
+    gap: 8px 16px;
   }
 
   .utility-links {
-    width: 100%;
-    margin: 7px 0 0;
-  }
-
-  .utility-links a:last-child {
-    padding-right: 8px;
+    gap: 15px;
   }
 
   .primary-bar {
