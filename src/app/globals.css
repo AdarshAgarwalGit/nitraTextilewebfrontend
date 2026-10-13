@@ -1551,6 +1551,332 @@ a:focus-visible {
   margin-top: 3px;
 }
 
+.library-hero,
+.library-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.library-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.library-hero h1 {
+  font-size: clamp(36px, 4.5vw, 54px);
+  letter-spacing: -0.04em;
+}
+
+.library-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.library-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.library-content {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 42px 0 68px;
+}
+
+.library-intro {
+  position: relative;
+  margin: 0 0 42px;
+  padding: 26px 30px 26px 72px;
+  border-left: 4px solid #1764a0;
+  background: #edf4f8;
+}
+
+.library-intro p {
+  margin: 0;
+  color: #34495a;
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.75;
+}
+
+.library-intro-mark {
+  position: absolute;
+  top: 8px;
+  left: 22px;
+  color: #1764a0;
+  font-family: Georgia, serif;
+  font-size: 60px;
+  line-height: 1;
+}
+
+.library-section h2 {
+  margin: 0 0 16px;
+  color: #1764a0;
+  font-size: clamp(21px, 2.5vw, 28px);
+  line-height: 1.3;
+}
+
+.library-lead,
+.library-panel p,
+.library-hours p {
+  margin: 0;
+  color: #435466;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.library-lead {
+  max-width: 940px;
+  margin-bottom: 20px;
+}
+
+.library-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.library-resource-card {
+  display: flex;
+  min-height: 106px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid #e1e7ed;
+  border-top: 3px solid #1764a0;
+  background: #fff;
+  box-shadow: 0 6px 18px rgb(9 33 52 / 5%);
+}
+
+.library-resource-card span {
+  color: #34495a;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.library-resource-card strong {
+  color: #1764a0;
+  font-size: 23px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.library-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 42px;
+}
+
+.library-sections-grid-lower {
+  margin-top: 32px;
+}
+
+.library-panel {
+  height: 100%;
+  padding: 22px;
+  border: 1px solid #e1e7ed;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 5%);
+}
+
+.library-panel h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.library-journal-list,
+.library-service-list,
+.library-membership-list {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.library-journal-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.library-journal-list li,
+.library-membership-list li {
+  padding: 11px 13px;
+  border-left: 3px solid #1764a0;
+  color: #34495a;
+  background: #f5f8fb;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.library-service-list li {
+  position: relative;
+  padding-left: 22px;
+  color: #435466;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.library-service-list li + li {
+  margin-top: 11px;
+}
+
+.library-service-list li::before {
+  position: absolute;
+  left: 0;
+  color: #1764a0;
+  content: "✓";
+  font-weight: 700;
+}
+
+.library-catalogue-link {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 0 16px;
+  border-radius: 4px;
+  color: #fff;
+  background: #1764a0;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.18s ease;
+}
+
+.library-catalogue-link:hover {
+  background: #0c4773;
+}
+
+.library-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 42px;
+}
+
+.library-bottom-grid .library-section {
+  min-width: 0;
+}
+
+.library-bottom-grid .library-panel {
+  min-height: 100%;
+}
+
+.library-membership-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 0;
+}
+
+.library-hours {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid #e1e7ed;
+  background: #edf4f8;
+}
+
+.library-hours-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #1764a0;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.careers-hero,
+.careers-hero .about-hero-inner {
+  min-height: 250px;
+}
+
+.careers-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.careers-hero h1 {
+  font-size: clamp(36px, 4.5vw, 54px);
+  letter-spacing: -0.04em;
+}
+
+.careers-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.careers-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.careers-gallery {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 42px 0 68px;
+  column-count: 3;
+  column-gap: 30px;
+}
+
+.careers-gallery-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 30px;
+  border-radius: 4px;
+  background: #e8edf1;
+  break-inside: avoid;
+}
+
+.careers-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.careers-gallery-overlay {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 18px;
+  color: #fff;
+  background: linear-gradient(transparent 42%, rgb(0 23 43 / 75%));
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.careers-gallery-expand {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 50%;
+  font-size: 19px;
+}
+
+.careers-gallery-item:hover img,
+.careers-gallery-item:focus-visible img {
+  transform: scale(1.035);
+}
+
+.careers-gallery-item:hover .careers-gallery-overlay,
+.careers-gallery-item:focus-visible .careers-gallery-overlay {
+  opacity: 1;
+}
+
 .nitra-training-hero {
   background:
     linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
@@ -2922,6 +3248,12 @@ a:focus-visible {
   .about-who-social {
     margin: 24px 0 16px;
   }
+
+  .careers-gallery {
+    width: min(100% - 40px, 1180px);
+    column-count: 2;
+    column-gap: 24px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -3010,6 +3342,52 @@ a:focus-visible {
 
   .fic-table {
     min-width: 820px;
+  }
+
+  .library-content {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0 40px;
+  }
+
+  .library-resource-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .library-resource-card {
+    min-height: 90px;
+    padding: 14px;
+  }
+
+  .library-sections-grid,
+  .library-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 30px;
+  }
+
+  .library-intro {
+    margin-bottom: 32px;
+    padding: 22px 20px 22px 54px;
+  }
+
+  .library-intro-mark {
+    left: 14px;
+  }
+
+  .library-journal-list {
+    grid-template-columns: 1fr;
+  }
+
+  .careers-gallery {
+    width: min(100% - 28px, 1180px);
+    padding: 28px 0 40px;
+    column-count: 1;
+    column-gap: 18px;
+  }
+
+  .careers-gallery-item {
+    margin-bottom: 18px;
   }
 
   .nitra-training-programmes {

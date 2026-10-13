@@ -81,7 +81,7 @@ const navigation = [
     label: "OPPORTUNITIES",
     href: "#opportunities",
     hasMenu: true,
-    menuItems: ["Careers", "Tenders", "Textile Jobs"],
+    menuItems: ["Careers", "Tenders"],
   },
 ];
 
@@ -161,6 +161,12 @@ function getAboutMenuHref(label) {
   }
   if (label === "Focus Incubation Centre") {
     return "/focus-incubation-centre/";
+  }
+  if (label === "Library") {
+    return "/library/";
+  }
+  if (label === "Careers") {
+    return "/careers/";
   }
   if (label === "Council of Administration") {
     return "/PDF/MEMBERS-OF-THE-COUNCIL-OF-ADMINISTRATION-2025-2026.pdf";
