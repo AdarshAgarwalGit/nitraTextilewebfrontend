@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const firstQuickLinks = [
   ["Home", "/"],
   ["About Us", "/about-us"],
@@ -38,21 +40,72 @@ function QuickLinks({ title, links }) {
 
 function SocialLinks() {
   const networks = [
-    ["Facebook", "f", "/facebook"],
-    ["Twitter", "♥", "/twitter"],
-    ["Instagram", "◎", "/instagram"],
-    ["YouTube", "▶", "/youtube"],
-    ["LinkedIn", "in", "/linkedin"],
+    ["Facebook", "https://www.facebook.com/nitrarajnagar/"],
+    ["Twitter", "https://twitter.com/NITRAgzb"],
+    ["YouTube", "https://www.youtube.com/@nitraghaziabad8883"],
+    ["Instagram", "https://www.instagram.com/nitra_org/"],
+    [
+      "LinkedIn",
+      "https://www.linkedin.com/company/northern-india-textile-research-association/",
+    ],
   ];
 
   return (
     <nav className="social-links" aria-label="Social media">
-      {networks.map(([name, mark, href]) => (
-        <a href={href} aria-label={name} key={name}>
-          {mark}
+      {networks.map(([name, href]) => (
+        <a
+          href={href}
+          aria-label={name}
+          key={name}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SocialIcon network={name} />
         </a>
       ))}
     </nav>
+  );
+}
+
+function SocialIcon({ network }) {
+  if (network === "Facebook") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 20 20">
+        <path d="M11.6 18v-7.3h2.5l.4-2.9h-2.9V6c0-.8.2-1.3 1.4-1.3h1.6V2.1c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H6.2v2.9h2.5V18h2.9Z" />
+      </svg>
+    );
+  }
+
+  if (network === "Twitter") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 20 20">
+        <path d="M18 4.4a6.5 6.5 0 0 1-1.9.5 3.3 3.3 0 0 0 1.5-1.8 6.7 6.7 0 0 1-2.1.8 3.3 3.3 0 0 0-5.7 2.3c0 .3 0 .5.1.8a9.4 9.4 0 0 1-6.8-3.5 3.3 3.3 0 0 0 1 4.4 3.3 3.3 0 0 1-1.5-.4v.1a3.3 3.3 0 0 0 2.7 3.2 3.3 3.3 0 0 1-1.5.1 3.3 3.3 0 0 0 3.1 2.3 6.7 6.7 0 0 1-4.1 1.4h-.8a9.4 9.4 0 0 0 5.1 1.5c6.1 0 9.5-5.1 9.5-9.5v-.4A6.8 6.8 0 0 0 18 4.4Z" />
+      </svg>
+    );
+  }
+
+  if (network === "YouTube") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 20 20">
+        <path d="M18.2 6.1a2.2 2.2 0 0 0-1.6-1.6C15.2 4.1 10 4.1 10 4.1s-5.2 0-6.6.4a2.2 2.2 0 0 0-1.6 1.6C1.4 7.5 1.4 10 1.4 10s0 2.5.4 3.9a2.2 2.2 0 0 0 1.6 1.6c1.4.4 6.6.4 6.6.4s5.2 0 6.6-.4a2.2 2.2 0 0 0 1.6-1.6c.4-1.4.4-3.9.4-3.9s0-2.5-.4-3.9ZM8.3 12.5v-5L12.7 10l-4.4 2.5Z" />
+      </svg>
+    );
+  }
+
+  if (network === "Instagram") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
+        <rect x="2.5" y="2.5" width="15" height="15" rx="4" />
+        <circle cx="10" cy="10" r="3.5" />
+        <circle cx="14.8" cy="5.4" r="1" fill="currentColor" stroke="none" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg aria-hidden="true" viewBox="0 0 20 20">
+      <path d="M4.2 7.4H1.5V18h2.7V7.4ZM2.9 6a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2ZM18.5 11.9c0-3.2-1.7-4.7-4-4.7-1.8 0-2.6 1-3 1.7V7.4H8.8V18h2.7v-5.3c0-1.4.3-2.8 2-2.8s1.8 1.6 1.8 2.9V18H18v-6.1Z" />
+    </svg>
   );
 }
 
@@ -112,7 +165,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>© 2024 NITRA. All rights reserved.</p>
         <nav aria-label="Footer navigation">
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
           <span aria-hidden="true">|</span>
           <a href="/about-us">About Us</a>
           <span aria-hidden="true">|</span>
@@ -120,7 +173,7 @@ export default function Footer() {
           <span aria-hidden="true">|</span>
           <a href="/new-bulletin">News Bulletin</a>
           <span aria-hidden="true">|</span>
-          <a href="/">Other Links</a>
+          <Link href="/">Other Links</Link>
           <span aria-hidden="true">|</span>
           <a href="/contact">Contact Us</a>
         </nav>
