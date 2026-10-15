@@ -1,46 +1,32 @@
 const firstQuickLinks = [
-  ["NIRF Rankings Data", "#nirf"],
-  ["Prevention of Ragging", "#anti-ragging"],
-  ["Syllabus (AKTU)", "#syllabus"],
-  ["Circulars (AKTU)", "#circulars"],
-  ["Results (OneView)", "#results"],
+  ["Home", "/"],
+  ["About Us", "/about-us"],
+  ["Consultancy", "/consultancy"],
+  ["Infrastructure", "/workshops"],
+  ["News Bulletin", "/new-bulletin"],
+  ["Publications", "/research-papers"],
+  ["Photo / Video Gallery", "/photo-gallery"],
+  ["Testing", "/quality-evaluation-and-testing-services"],
 ];
 
 const secondQuickLinks = [
-  ["Placement Records", "#placement-records"],
-  ["Photo Gallery", "#photo-gallery"],
-  ["Video Gallery", "#video-gallery"],
-  ["Training & Placement Cell", "#placement-cell"],
-  ["Placement Policy", "#placement-policy"],
-  ["Brochure & Guidance", "#brochure"],
-  ["View All Programs", "#programs"],
+  ["Training Programs", "/training-programmes-at-nitra"],
+  ["Research & Development", "/research-develpment-projects"],
+  ["Integrated Textile & Apparel Development Centre (ITADC)", "/integrated-textile-and-apparel-development-centre"],
+  ["Careers", "/careers"],
+  ["Tenders", "/tenders"],
+  ["Contact us", "/contact-us"],
 ];
-
-function FooterBrand() {
-  return (
-    <a className="footer-brand" href="#home" aria-label="NITRA Technical Campus">
-      <span className="footer-brand-seal" aria-hidden="true">
-        <span>TECHNICAL</span>
-        <strong>nitra</strong>
-        <span>CAMPUS</span>
-      </span>
-      <span className="footer-brand-name">
-        <strong>NITRA</strong>
-        <span>TECHNICAL CAMPUS</span>
-      </span>
-    </a>
-  );
-}
 
 function QuickLinks({ title, links }) {
   return (
     <section className="footer-column">
-      <h2 className="footer-heading">{title}</h2>
+      {title ? <h2 className="footer-heading">{title}</h2> : null}
       <ul className="footer-link-list">
         {links.map(([label, href]) => (
           <li key={label}>
             <a href={href}>
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">›</span>
               {label}
             </a>
           </li>
@@ -52,11 +38,11 @@ function QuickLinks({ title, links }) {
 
 function SocialLinks() {
   const networks = [
-    ["LinkedIn", "in", "#linkedin"],
-    ["Instagram", "◎", "#instagram"],
-    ["YouTube", "▶", "#youtube"],
-    ["Facebook", "f", "#facebook"],
-    ["Twitter", "♥", "#twitter"],
+    ["Facebook", "f", "/facebook"],
+    ["Twitter", "♥", "/twitter"],
+    ["Instagram", "◎", "/instagram"],
+    ["YouTube", "▶", "/youtube"],
+    ["LinkedIn", "in", "/linkedin"],
   ];
 
   return (
@@ -75,39 +61,48 @@ export default function Footer() {
     <footer className="site-footer" id="contact">
       <div className="footer-content">
         <section className="footer-about" aria-label="About NITRA">
-          <FooterBrand />
+          <h2 className="footer-heading">About NITRA</h2>
           <p>
-            We are committed educators advancing innovation through research
-            and quality learning for students of all disciplines.
+            Northern India Textile Research Association (NITRA) is a leading textile
+            research institute established in 1974, offering R&amp;D, technical
+            consultancy, training, and more. It serves 1,200 textile and allied sector
+            clients, and NITRA Technical Campus provides B.Tech programs.
           </p>
           <SocialLinks />
         </section>
 
-        <QuickLinks title="Quick Links" links={firstQuickLinks} />
-        <QuickLinks title="Quick Links" links={secondQuickLinks} />
+        <QuickLinks title={null} links={firstQuickLinks} />
+        <QuickLinks title={null} links={secondQuickLinks} />
 
         <section className="footer-column footer-contact">
-          <h2 className="footer-heading">Find Us</h2>
+          <h2 className="footer-heading">Contact Us</h2>
           <address>
             <p>
               <span aria-hidden="true">⌖</span>
               <span>
-                NITRA Technical Campus, Sector-23, Raj Nagar Sanjay Nagar,
-                Ghaziabad – 201002, U.P.
+                Northern India Textile Research
+                <br />
+                Association
+                <br />
+                Sector-23, Raj Nagar, Ghaziabad-201002
               </span>
             </p>
             <p>
-              <span aria-hidden="true">♧</span>
+              <span aria-hidden="true">☎</span>
               <span>
-                <a href="tel:8368840122">8368840122, 8368184387</a>
+                <a href="tel:01202807390995">0120-2807390-995</a>
               </span>
             </p>
             <p>
               <span aria-hidden="true">✉</span>
               <span>
-                <a href="mailto:ntcdiroffice@nitra.ac.in">
-                  ntcdiroffice@nitra.ac.in
-                </a>
+                <a href="mailto:mail@nitratexile.org">mail@nitratexile.org</a>
+              </span>
+            </p>
+            <p>
+              <span aria-hidden="true">◌</span>
+              <span>
+                <a href="https://nitratexile.org">nitratexile.org</a>
               </span>
             </p>
           </address>
@@ -115,14 +110,21 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2026 NITRA Technical Campus. All rights reserved.</p>
-        <nav aria-label="Legal">
-          <a href="#privacy-policy">Privacy Policy</a>
-          <span aria-hidden="true">·</span>
-          <a href="#terms-of-use">Terms of Use</a>
-          <span aria-hidden="true">·</span>
-          <a href="#grievance">Grievance</a>
+        <p>© 2024 NITRA. All rights reserved.</p>
+        <nav aria-label="Footer navigation">
+          <a href="/">Home</a>
+          <span aria-hidden="true">|</span>
+          <a href="/about-us">About Us</a>
+          <span aria-hidden="true">|</span>
+          <a href="/intellectual-capital-2">Who&apos;s Who</a>
+          <span aria-hidden="true">|</span>
+          <a href="/new-bulletin">News Bulletin</a>
+          <span aria-hidden="true">|</span>
+          <a href="/">Other Links</a>
+          <span aria-hidden="true">|</span>
+          <a href="/contact-us">Contact Us</a>
         </nav>
+        <span className="footer-activate">Activate Windows</span>
       </div>
     </footer>
   );

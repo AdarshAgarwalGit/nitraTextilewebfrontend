@@ -332,17 +332,17 @@ export default function Header() {
       <div className="primary-bar">
         <CampusMark />
         <nav className="primary-navigation" aria-label="Main navigation">
-          {navigation.map((item) => (
-            <div
-              className={item.hasMenu ? "primary-nav-item has-menu" : "primary-nav-item"}
-              key={item.label}
-            >
-              <a className="primary-nav-link" href={item.href}>
-                {item.label}
-                {item.hasMenu && <Chevron />}
-              </a>
-
-              {item.hasMenu && item.menuItems && (
+          {navigation.map((item) =>
+            item.hasMenu && item.menuItems ? (
+              <details
+                className="primary-nav-item has-menu"
+                name="primary-navigation"
+                key={item.label}
+              >
+                <summary className="primary-nav-link">
+                  {item.label}
+                  <Chevron />
+                </summary>
                 <div className="nav-dropdown" aria-label={`${item.label} submenu`}>
                   <ul className="nav-dropdown-list">
                     {item.menuItems.map((menuItem) => (
@@ -408,9 +408,15 @@ export default function Header() {
                     ))}
                   </ul>
                 </div>
-              )}
-            </div>
-          ))}
+              </details>
+            ) : (
+              <div className="primary-nav-item" key={item.label}>
+                <a className="primary-nav-link" href={item.href}>
+                  {item.label}
+                </a>
+              </div>
+            ),
+          )}
         </nav>
 
         <div className="header-actions">

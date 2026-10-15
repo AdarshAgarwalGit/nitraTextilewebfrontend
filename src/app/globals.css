@@ -213,14 +213,12 @@ a:focus-visible {
   padding-bottom: 10px;
 }
 
-.primary-nav-item:hover > .nav-dropdown,
-.primary-nav-item:focus-within > .nav-dropdown,
+.primary-nav-item[open] > .nav-dropdown,
 .nav-submenu-item:hover > .nav-dropdown,
 .nav-submenu-item:focus-within > .nav-dropdown,
 .nav-dropdown:hover,
 .nav-dropdown:focus-within,
-.has-menu:hover > .nav-dropdown,
-.has-menu:focus-within > .nav-dropdown {
+.primary-nav-item[open] > .nav-dropdown {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
@@ -236,6 +234,15 @@ a:focus-visible {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+summary.primary-nav-link {
+  cursor: pointer;
+  list-style: none;
+}
+
+summary.primary-nav-link::-webkit-details-marker {
+  display: none;
 }
 
 .nav-dropdown {
