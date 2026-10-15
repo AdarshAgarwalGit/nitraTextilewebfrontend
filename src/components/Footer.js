@@ -5,7 +5,7 @@ const firstQuickLinks = [
   ["Infrastructure", "/workshops"],
   ["News Bulletin", "/new-bulletin"],
   ["Publications", "/research-papers"],
-  ["Photo / Video Gallery", "/photo-gallery"],
+  ["Photo / Video Gallery", "/photo-video-gallery/"],
   ["Testing", "/quality-evaluation-and-testing-services"],
 ];
 
@@ -15,7 +15,7 @@ const secondQuickLinks = [
   ["Integrated Textile & Apparel Development Centre (ITADC)", "/integrated-textile-and-apparel-development-centre"],
   ["Careers", "/careers"],
   ["Tenders", "/tenders"],
-  ["Contact us", "/contact-us"],
+  ["Contact us", "/contact"],
 ];
 
 function QuickLinks({ title, links }) {
@@ -122,7 +122,7 @@ export default function Footer() {
           <span aria-hidden="true">|</span>
           <a href="/">Other Links</a>
           <span aria-hidden="true">|</span>
-          <a href="/contact-us">Contact Us</a>
+          <a href="/contact">Contact Us</a>
         </nav>
         <span className="footer-activate">Activate Windows</span>
       </div>
