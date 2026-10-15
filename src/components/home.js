@@ -95,7 +95,7 @@ export default function Home() {
               industry and the Ministry of Textiles, Government of India, in
               1974, NITRA has nurtured a legacy of cutting-edge research,
               transformative training, and unmatched expertise for nearly half
-              a century.
+              a century dbfi.
             </p>
 
             <ul className="home-service-list">
