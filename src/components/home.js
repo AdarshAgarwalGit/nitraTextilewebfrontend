@@ -2,6 +2,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import HomeSlideshow from "./HomeSlideshow";
 import HomeDashboard from "./HomeDashboard";
+import HomeNewsSection from "./HomeNewsSection";
 import Image from "next/image";
 
 const newsItems = [
@@ -125,6 +126,7 @@ export default function Home() {
         </section>
         <HomeSlideshow />
         <HomeDashboard />
+        <HomeNewsSection />
       </main>
       <Footer />
     </>

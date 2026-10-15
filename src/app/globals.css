@@ -3876,6 +3876,65 @@ summary.primary-nav-link::-webkit-details-marker {
   height: auto;
 }
 
+.home-press-section {
+  width: min(100%, 1013px);
+  margin: 0 auto;
+  padding: 0 0 48px;
+}
+
+.home-event-banner {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-event-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-press-divider {
+  height: 1px;
+  margin: 32px 0 27px;
+  background: #8f8f8f;
+}
+
+.home-press-section h2 {
+  margin: 0 0 32px;
+  color: #fb3c64;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.home-press-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
+.home-press-image {
+  display: block;
+  overflow: hidden;
+  background: #fff;
+}
+
+.home-press-image img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.25s ease;
+}
+
+.home-press-image:hover img {
+  transform: scale(1.025);
+}
+
 .who-social-column,
 .who-social-news-panel,
 .who-itma-column {
@@ -4566,6 +4625,44 @@ summary.primary-nav-link::-webkit-details-marker {
     width: min(100% - 28px, 1210px);
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .home-dashboard .who-social-news {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .home-press-section {
+    width: 100%;
+  }
+
+  .home-press-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .home-press-image img {
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+  }
+
+  .home-dashboard .home-impact-panel {
+    min-height: 210px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 24px 18px;
+  }
+
+  .home-dashboard .impact-stat {
+    border-right: 0;
+  }
+
+  .home-dashboard .impact-stat:nth-child(odd) {
+    border-right: 1px solid rgb(255 255 255 / 85%);
+  }
+
+  .home-dashboard .impact-stat:nth-child(-n + 2) {
+    border-bottom: 1px solid rgb(255 255 255 / 85%);
   }
 
   .who-facebook-embed {
