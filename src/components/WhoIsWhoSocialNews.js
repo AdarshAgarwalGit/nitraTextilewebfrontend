@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const newsItems = [
   {
     title: "Review Meeting on New Age Fibers at NITRA, Ghaziabad",
@@ -88,15 +90,21 @@ export default function WhoIsWhoSocialNews() {
       </div>
 
       <div className="who-itma-column">
-        <h2 className="who-social-heading">ITMA ASIA + CITME</h2>
+        <h2 className="who-social-heading">ITMA 2027</h2>
         <a
           className="who-itma-link"
           href={itmaUrl}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Learn how to exhibit at ITMA ASIA"
+          aria-label="View ITMA 2027 information"
         >
-          Exhibitor information <span aria-hidden="true">→</span>
+          <Image
+            src="/Images/itma-2027.gif"
+            alt="ITMA 2027, 16–22 September in Messegelände, Hannover, Germany"
+            width={200}
+            height={400}
+            unoptimized
+          />
         </a>
       </div>
     </section>

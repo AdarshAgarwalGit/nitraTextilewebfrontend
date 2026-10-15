@@ -1,5 +1,7 @@
+import Link from "next/link";
+
 const navigation = [
-  { label: "HOME", href: "#home" },
+  { label: "HOME", href: "/" },
   {
     label: "ABOUT US",
     href: "/about-us",
@@ -87,13 +89,13 @@ const navigation = [
 
 function CampusMark() {
   return (
-    <a className="campus-mark" href="#home" aria-label="NITRA Technical Campus home">
+    <Link className="campus-mark" href="/" aria-label="NITRA Technical Campus home">
       <span className="campus-mark-seal" aria-hidden="true">
         <span>TECHNICAL</span>
         <strong>nitra</strong>
         <span>CAMPUS</span>
       </span>
-    </a>
+    </Link>
   );
 }
 
