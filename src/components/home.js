@@ -4,6 +4,7 @@ import HomeSlideshow from "./HomeSlideshow";
 import HomeDashboard from "./HomeDashboard";
 import HomeNewsSection from "./HomeNewsSection";
 import HomeMoUsSection from "./HomeMoUsSection";
+import HomeFeaturesSection from "./HomeFeaturesSection";
 import Image from "next/image";
 
 const newsItems = [
@@ -125,10 +126,11 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <HomeSlideshow />
+        <HomeSlideshow />        
         <HomeDashboard />
         <HomeNewsSection />
         <HomeMoUsSection />
+        <HomeFeaturesSection />
       </main>
       <Footer />
     </>
