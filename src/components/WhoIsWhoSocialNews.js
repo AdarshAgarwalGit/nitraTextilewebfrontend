@@ -1,7 +1,7 @@
 const newsItems = [
   {
     title: "Review Meeting on New Age Fibers at NITRA, Ghaziabad",
-    href: "https://nitratextile.org/review-meeting-on-new-age-fibers-at-nitra-ghaziabad/",
+    href: "/review-meeting-on-new-age-fibers-at-nitra-ghaziabad/",
   },
   {
     title: "Training Programmes Offered by NITRA",

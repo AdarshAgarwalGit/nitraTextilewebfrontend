@@ -70,21 +70,21 @@ const tenders = [
     title: "Sealed Bids are invited for purchase of Bale-Press",
     lastDate: "15th July 2025 by 12.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2025/06/Bids-Tender.pdf",
+      "/wp-content/uploads/2025/06/Bids-Tender.pdf",
   },
   {
     title: "Sealed Bids are invited for purchase of ‘Fiber Filling Machine”",
     lastDate: "20th June. 2025 by 12.00 PM",
     extended: "27-6-2025 (Friday) at 03.00 pm",
     source:
-      "https://nitratextile.org/wp-content/uploads/2025/05/Tender-Fiber-Filling-Machine-Under-Project-sponsored-by-MOTGOI.pdf",
+      "/wp-content/uploads/2025/05/Tender-Fiber-Filling-Machine-Under-Project-sponsored-by-MOTGOI.pdf",
   },
   {
     title:
       "Sealed Quotation for (i) Fabrication of Scrap Store Room; and(ii) Construction of Temporary Aluminum Room for Catering services at NITRA",
     lastDate: "22nd May. 2025 by 12.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2025/05/SCRAP-STORE-ROOM-AND-TEMP-ROOM-TENDER-MAY-2025.pdf",
+      "/wp-content/uploads/2025/05/SCRAP-STORE-ROOM-AND-TEMP-ROOM-TENDER-MAY-2025.pdf",
   },
   {
     title:
@@ -92,13 +92,13 @@ const tenders = [
     lastDate: "9th May. 2025 by 12.00 PM",
     extended: "26th May. 2025 by 3.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2025/04/Milkweed-Project.pdf",
+      "/wp-content/uploads/2025/04/Milkweed-Project.pdf",
   },
   {
     title: "Sealed Quotation for Security Services Contract",
     lastDate: "19th Mar. 2025 by 2.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2025/03/NITRA-SECURITY-CONTRACT-QUOTATION-MARCH-2025.pdf",
+      "/wp-content/uploads/2025/03/NITRA-SECURITY-CONTRACT-QUOTATION-MARCH-2025.pdf",
   },
   {
     title:
@@ -106,7 +106,7 @@ const tenders = [
     lastDate: "18th Feb. 2025 by 12.00 PM",
     extended: "4th Mar. 2025 by 3.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2025/01/tender-Thermal-Analyser.pdf",
+      "/wp-content/uploads/2025/01/tender-Thermal-Analyser.pdf",
   },
   {
     title:
@@ -114,7 +114,7 @@ const tenders = [
     lastDate: "24th Dec. 2024 by 12.00 PM",
     extended: "01 Jan. 2025 by 03.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2024/12/tender-thermal.pdf",
+      "/wp-content/uploads/2024/12/tender-thermal.pdf",
   },
   {
     title:
@@ -122,30 +122,30 @@ const tenders = [
     lastDate: "10th Dec. 2024 by 12.00 PM",
     extended: "16th Dec. 2024 by 12.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2024/11/Tender-Document-for-Setup-of-100KW-Solar-Roof-Top.pdf",
+      "/wp-content/uploads/2024/11/Tender-Document-for-Setup-of-100KW-Solar-Roof-Top.pdf",
   },
   {
     title: "Sealed Bids are invited for ‘Lab Scale Reactor",
     lastDate: "25th sep. 2024 by 12.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2024/09/Tender-for-Lab-Scale-.pdf",
+      "/wp-content/uploads/2024/09/Tender-for-Lab-Scale-.pdf",
   },
   {
     title: "Sealed Quotation for Road Construction Work in NITRA Main Building",
     lastDate: "21st sep. 2024 by 1.00 PM",
-    source: "https://nitratextile.org/wp-content/uploads/2024/09/ROAD-.pdf",
+    source: "/wp-content/uploads/2024/09/ROAD-.pdf",
   },
   {
     title: "QUOTATION IN RESPECT OF MESS CONTRACT",
     lastDate: "9th sep. 2024 by 4.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2024/09/31.8.24-QUOTATION-IN-RESPECT-OF-MESS-CONTRACT.pdf",
+      "/wp-content/uploads/2024/09/31.8.24-QUOTATION-IN-RESPECT-OF-MESS-CONTRACT.pdf",
   },
   {
     title: "Tender Form Sale & Material Inspection",
     lastDate: "4th sep. 2024 by 2.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2024/08/scrap-tender.pdf",
+      "/wp-content/uploads/2024/08/scrap-tender.pdf",
   },
   {
     title:
@@ -153,14 +153,14 @@ const tenders = [
     lastDate: "113th Aug. 2024 by 1.00 PM",
     extended: "30th August 2024 by 1.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2024/08/tender-paint.pdf",
+      "/wp-content/uploads/2024/08/tender-paint.pdf",
   },
   {
     title:
       "Tender Document for Manufacturing of Testing Instruments under NTTM Projects",
     lastDate: "1-Sep.-2024 up to 12.00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2024/08/Limited-Tender-under-NTTM.pdf",
+      "/wp-content/uploads/2024/08/Limited-Tender-under-NTTM.pdf",
   },
   {
     title:
@@ -171,7 +171,7 @@ const tenders = [
     title: "NOTICE INVITING TENDER FOR SCRAP",
     lastDate: "15-03-2024 up to 2:00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2024/03/TENDER-DOCUMENT-MARCH-2024.pdf",
+      "/wp-content/uploads/2024/03/TENDER-DOCUMENT-MARCH-2024.pdf",
   },
   {
     title: "Limited Tender for Machines require for Polymer Pellet preparation",
@@ -184,13 +184,13 @@ const tenders = [
     title: "NOTICE INVITING TENDER FOR SCRAP",
     lastDate: "15-03-2024 up to 2:00 PM",
     source:
-      "https://nitratextile.org/wp-content/uploads/2024/03/TENDER-DOCUMENT-MARCH-2024.pdf",
+      "/wp-content/uploads/2024/03/TENDER-DOCUMENT-MARCH-2024.pdf",
   },
   {
     title: "Sealed Bids are invited for ‘Fire Fighter Suit or Fire Entry Suit’",
     lastDate: "07-03-2024 (up to 12.00 pm)",
     source:
-      "https://nitratextile.org/wp-content/uploads/2024/02/Fire-Fighter-Suit-tender.pdf",
+      "/wp-content/uploads/2024/02/Fire-Fighter-Suit-tender.pdf",
   },
   {
     title:

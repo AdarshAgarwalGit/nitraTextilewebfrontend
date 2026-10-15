@@ -1,6 +1,7 @@
 import Footer from "./Footer";
 import Header from "./Header";
 import Image from "next/image";
+import Link from "next/link";
 
 const galleryItems = [
   "IMG-20260521-WA0016.jpg",
@@ -47,7 +48,7 @@ export default function PhotoVideoGalleryPage() {
         <section className="gallery-page-banner" aria-labelledby="photo-video-gallery-title">
           <div className="gallery-page-inner">
             <p className="gallery-page-breadcrumb">
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
               <span aria-hidden="true"> / </span>
               <span>Photo / Video Gallery</span>
             </p>

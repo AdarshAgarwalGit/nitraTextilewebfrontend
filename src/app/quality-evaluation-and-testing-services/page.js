@@ -6,21 +6,21 @@ const testingServices = [
   [
     {
       title: "Physical Quality Evaluation Laboratory",
-      href: "https://nitratextile.org/physical-quality-evaluation-laboratory/",
+      href: "/physical-quality-evaluation-laboratory/",
     },
     {
       title: "Chemical Quality Evaluation Laboratory",
-      href: "https://nitratextile.org/chemical-quality-evaluation-laboratory/",
+      href: "/chemical-quality-evaluation-laboratory/",
     },
   ],
   [
     {
       title: "Polymer & Technical Textiles Laboratory",
-      href: "https://nitratextile.org/polymer-technical-textiles-laboratory/",
+      href: "/polymer-technical-textiles-laboratory/",
     },
     {
       title: "Heat & Flame Testing Laboratory",
-      href: "https://nitratextile.org/heat-flame-testing-laboratory/",
+      href: "/heat-flame-testing-laboratory/",
     },
   ],
   [
@@ -30,13 +30,13 @@ const testingServices = [
     },
     {
       title: "Eco Laboratory",
-      href: "https://nitratextile.org/environment-laboratory/",
+      href: "/environment-laboratory/",
     },
   ],
   [
     {
       title: "Protective & Automotive Textile Testing",
-      href: "https://nitratextile.org/",
+      href: "/",
     },
     {
       title: "PPEs & Masks Testing",
@@ -56,7 +56,7 @@ const testingServices = [
   [
     {
       title: "Environment Laboratory",
-      href: "https://nitratextile.org/environment-laboratory/",
+      href: "/environment-laboratory/",
     },
   ],
 ];

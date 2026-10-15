@@ -6,7 +6,7 @@ import Image from "next/image";
 const newsItems = [
   {
     title: "Review Meeting on New Age Fibers at NITRA, Ghaziabad",
-    href: "https://nitratextile.org/review-meeting-on-new-age-fibers-at-nitra-ghaziabad/",
+    href: "/review-meeting-on-new-age-fibers-at-nitra-ghaziabad/",
   },
   {
     title: "NITRA Hosts Ms. Priyanka Khosla Bajaj for Industry–Academia Interaction",
@@ -18,7 +18,7 @@ const newsItems = [
   },
   {
     title: "Training Programmes Offered by NITRA",
-    href: "https://nitratextile.org/training-programmes-offered-by-nitra/",
+    href: "/training-programmes-offered-by-nitra/",
   },
 ];
 
@@ -112,7 +112,7 @@ export default function Home() {
             <div className="home-intro-actions">
               <a
                 className="home-membership-link"
-                href="https://nitratextile.org/wp-content/uploads/2024/04/NITRA-Membership-form.pdf"
+                href="/wp-content/uploads/2024/04/NITRA-Membership-form.pdf"
               >
                 Membership Form
               </a>
