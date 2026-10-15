@@ -1,11 +1,15 @@
+import Image from "next/image";
+
 const profileUrl = "/intellectual-capital-2/";
 
 export default function WhoIsWhoProfile({ showReadMore = false }) {
   return (
     <div className="about-who-profile">
-      <img
+      <Image
         className="about-who-portrait"
         src="/Images/director-general.jpeg"
+        width={275}
+        height={410}
         alt="Dr. M. S. Parmar, Director General of NITRA"
       />
 
@@ -13,11 +17,20 @@ export default function WhoIsWhoProfile({ showReadMore = false }) {
         <h2 id="about-who-title">Dr. M.S.Parmar</h2>
         <p className="about-who-role">Director General</p>
         <p className="about-who-description">
-          Dr. M.S.Parmar, Director General, working at NITRA for the last 32
-          years in various capacities. His main areas of expertise are Textile
-          Chemistry, Protective Textiles, unconventional fibres and Quality
-          Control of Textiles. Besides this, he is also looking after Heat
-          &amp; Fire Laboratory and Chemical Laboratory.
+          Dr. M.S. Parmar, Director General, has been working at NITRA for the
+          last 32 years in various capacities. He has been Director NITRA for
+          about two years. He has also been Head of Chemical Quality Evaluation
+          Division, Research &amp; Development (Products) Division and Polymer
+          &amp; Technical Textiles Division.           He has been coordinating COE-PROTECH
+          activities. His areas of expertise include Textile Chemistry,
+          Protective &amp; Automotive Textiles, unconventional fibres and
+          Quality Control of Textiles. Besides this, he has also been
+          instrumental in establishing Heat &amp; Flame and Microbiology Labs.
+          As Director (Labs), he has looked after all seven NABL-accredited and
+          BIS-recognized labs of NITRA. His recent research on Milkweed Fibres
+          and technical textiles has earned many laurels for NITRA and the
+          textile fraternity. He is one of the renowned textile researchers in
+          the country.
         </p>
       </div>
 

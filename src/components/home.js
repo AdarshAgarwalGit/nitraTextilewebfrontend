@@ -5,6 +5,7 @@ import HomeDashboard from "./HomeDashboard";
 import HomeNewsSection from "./HomeNewsSection";
 import HomeMoUsSection from "./HomeMoUsSection";
 import HomeFeaturesSection from "./HomeFeaturesSection";
+import HomeWhoIsWhoSection from "./HomeWhoIsWhoSection";
 import Image from "next/image";
 
 const newsItems = [
@@ -131,6 +132,7 @@ export default function Home() {
         <HomeNewsSection />
         <HomeMoUsSection />
         <HomeFeaturesSection />
+        <HomeWhoIsWhoSection />
       </main>
       <Footer />
     </>
