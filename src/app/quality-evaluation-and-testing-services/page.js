@@ -29,7 +29,7 @@ const testingServices = [
       href: "/PDF/MANIKIN-1.pdf",
     },
     {
-      title: "Eco Laboratory",
+      title: "Environment Laboratory",
       href: "/environment-laboratory/",
     },
   ],
@@ -41,6 +41,7 @@ const testingServices = [
     {
       title: "PPEs & Masks Testing",
       unavailable: true,
+      unavailableReason: "The PDF link supplied by the source site is unavailable.",
     },
   ],
   [
@@ -51,12 +52,7 @@ const testingServices = [
     {
       title: "Sample Development Charges (Spg & Wvg Pilot Plants)",
       unavailable: true,
-    },
-  ],
-  [
-    {
-      title: "Environment Laboratory",
-      href: "/environment-laboratory/",
+      unavailableReason: "The PDF link supplied by the source site is unavailable.",
     },
   ],
 ];
@@ -72,7 +68,7 @@ function ServiceLink({ service }) {
     return (
       <span className="testing-service-unavailable">
         {service.title}
-        <span>PDF currently unavailable</span>
+        <span>{service.unavailableReason ?? "PDF currently unavailable"}</span>
       </span>
     );
   }

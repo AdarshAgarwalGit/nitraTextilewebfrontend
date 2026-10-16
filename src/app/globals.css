@@ -3840,6 +3840,204 @@ summary.primary-nav-link::-webkit-details-marker {
   font-size: 12px;
 }
 
+.testing-lab-content {
+  display: grid;
+  width: min(100% - 48px, 1180px);
+  gap: 28px;
+  margin: 0 auto;
+  padding: 48px 0 64px;
+}
+
+.testing-lab-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.testing-lab-intro,
+.testing-lab-photo-placeholder {
+  min-height: 290px;
+}
+
+.testing-lab-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testing-lab-kicker {
+  margin: 0 0 10px;
+  color: #1764a0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.testing-lab-intro h2,
+.testing-lab-section-heading h2,
+.testing-lab-related h2 {
+  margin: 0 0 16px;
+  color: #102a43;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.testing-lab-intro > p:last-child {
+  margin: 0;
+  color: #425668;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.testing-lab-image {
+  min-height: 290px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #eaf1f6;
+}
+
+.testing-lab-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 290px;
+  object-fit: cover;
+}
+
+.testing-lab-photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 32px;
+  color: #fff;
+  background:
+    linear-gradient(140deg, rgb(4 35 68 / 30%), rgb(4 35 68 / 88%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.testing-lab-photo-placeholder span {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.testing-lab-photo-placeholder strong {
+  font-size: clamp(22px, 3vw, 34px);
+}
+
+.testing-lab-card {
+  padding: 26px;
+  border: 1px solid #dce4eb;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.testing-lab-section-heading h2 {
+  margin-bottom: 0;
+}
+
+.testing-lab-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.testing-lab-chip-list li {
+  padding: 9px 13px;
+  border: 1px solid #dce7ef;
+  border-radius: 3px;
+  color: #1764a0;
+  background: #f4f8fb;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.testing-lab-instruments {
+  display: grid;
+  gap: 20px;
+}
+
+.testing-lab-instrument-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+  margin: 0;
+  padding: 22px 26px;
+  border: 1px solid #dce4eb;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+  list-style: none;
+}
+
+.testing-lab-instrument-grid li {
+  position: relative;
+  padding: 12px 8px 12px 22px;
+  border-bottom: 1px solid #e7edf2;
+  color: #425668;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.testing-lab-instrument-grid li::before {
+  position: absolute;
+  top: 21px;
+  left: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #18a8df;
+  content: "";
+}
+
+.testing-lab-related {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.7fr) minmax(0, 1.3fr);
+  gap: 24px;
+  padding: 26px;
+  border-left: 4px solid #18a8df;
+  background: #eaf4fb;
+}
+
+.testing-lab-related h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.testing-lab-related-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.testing-lab-related-links a {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #d4e4f0;
+  color: #1764a0;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.testing-lab-related-links a:hover,
+.testing-lab-related-links a:focus-visible {
+  border-color: #1764a0;
+  background: #f0f7fc;
+}
+
 .new-bulletin-hero {
   background:
     linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
@@ -5255,6 +5453,29 @@ summary.primary-nav-link::-webkit-details-marker {
   .testing-services-content {
     width: min(100% - 28px, 1180px);
     padding: 28px 0 40px;
+  }
+
+  .testing-lab-content {
+    width: min(100% - 28px, 1180px);
+    gap: 20px;
+    padding: 28px 0 40px;
+  }
+
+  .testing-lab-overview,
+  .testing-lab-related,
+  .testing-lab-instrument-grid,
+  .testing-lab-related-links {
+    grid-template-columns: 1fr;
+  }
+
+  .testing-lab-intro,
+  .testing-lab-photo-placeholder {
+    min-height: 220px;
+  }
+
+  .testing-lab-card,
+  .testing-lab-related {
+    padding: 18px;
   }
 
   .bulletin-content {
