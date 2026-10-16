@@ -2031,6 +2031,237 @@ summary.primary-nav-link::-webkit-details-marker {
   background: #f7fafc;
 }
 
+.itadc-hero {
+  background:
+    linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
+    url("/Images/nitra-campus-1.png") center 48% / cover no-repeat;
+}
+
+.itadc-hero,
+.itadc-hero .about-hero-inner {
+  min-height: 270px;
+}
+
+.itadc-hero .about-hero-inner {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.itadc-hero h1 {
+  max-width: 900px;
+  font-size: clamp(36px, 4.6vw, 58px);
+  letter-spacing: -0.04em;
+}
+
+.itadc-hero .about-breadcrumb {
+  margin: 18px 0 0;
+  font-size: 16px;
+}
+
+.itadc-hero .about-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.itadc-content {
+  display: grid;
+  width: min(100% - 48px, 1180px);
+  gap: 28px;
+  margin: 0 auto;
+  padding: 48px 0 64px;
+}
+
+.itadc-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.itadc-overview-copy {
+  align-self: center;
+}
+
+.itadc-kicker {
+  margin: 0 0 10px;
+  color: #1764a0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.itadc-overview h2,
+.itadc-section-heading h2 {
+  margin: 0 0 16px;
+  color: #102a43;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.itadc-overview-copy > p:last-child {
+  margin: 0;
+  color: #425668;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.itadc-location-panel,
+.itadc-card,
+.itadc-service-card {
+  border: 1px solid #dce4eb;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.itadc-location-panel {
+  padding: 24px;
+}
+
+.itadc-location-panel h2 {
+  margin-bottom: 18px;
+  font-size: 23px;
+}
+
+.itadc-location-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.itadc-location-list a {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 12px;
+  border: 1px solid #e1e8ee;
+  color: #1764a0;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.itadc-location-list a:hover,
+.itadc-location-list a:focus-visible {
+  border-color: #1764a0;
+  background: #f0f7fc;
+}
+
+.itadc-location-list a span {
+  font-size: 18px;
+}
+
+.itadc-design-callout {
+  padding: 24px 30px;
+  border-left: 4px solid #18a8df;
+  background: #eaf4fb;
+}
+
+.itadc-design-callout span {
+  display: block;
+  margin-bottom: 6px;
+  color: #1764a0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.itadc-design-callout h2 {
+  margin: 0;
+  color: #102a43;
+  font-size: clamp(20px, 2.4vw, 28px);
+}
+
+.itadc-principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.itadc-card {
+  padding: 24px;
+}
+
+.itadc-card h2,
+.itadc-service-card h3 {
+  margin: 0 0 16px;
+  color: #1764a0;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.itadc-card p,
+.itadc-service-card p {
+  margin: 0;
+  color: #425668;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.itadc-card ul,
+.itadc-service-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 20px;
+  color: #425668;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.itadc-card .itadc-list-intro {
+  margin: 18px 0 10px;
+  color: #102a43;
+}
+
+.itadc-resources ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+}
+
+.itadc-services {
+  display: grid;
+  gap: 20px;
+}
+
+.itadc-section-heading h2 {
+  margin-bottom: 0;
+}
+
+.itadc-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.itadc-service-card {
+  overflow: hidden;
+}
+
+.itadc-service-card h3 {
+  min-height: 64px;
+  margin: 0;
+  padding: 16px 18px;
+  color: #fff;
+  background: #1764a0;
+  font-size: 17px;
+}
+
+.itadc-service-card ul,
+.itadc-service-card p {
+  padding: 18px 20px 20px 38px;
+}
+
+.itadc-service-card p {
+  padding-left: 18px;
+}
+
 .third-party-inspection-hero {
   background:
     linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
@@ -4620,6 +4851,14 @@ summary.primary-nav-link::-webkit-details-marker {
     column-count: 2;
     column-gap: 24px;
   }
+
+  .itadc-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .itadc-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -4633,6 +4872,31 @@ summary.primary-nav-link::-webkit-details-marker {
 
   .who-directory {
     width: min(100% - 28px, 1125px);
+  }
+
+  .itadc-content {
+    width: min(100% - 28px, 1180px);
+    gap: 20px;
+    padding: 28px 0 40px;
+  }
+
+  .itadc-hero,
+  .itadc-hero .about-hero-inner {
+    min-height: 240px;
+  }
+
+  .itadc-principles,
+  .itadc-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .itadc-location-panel,
+  .itadc-card {
+    padding: 18px;
+  }
+
+  .itadc-resources ul {
+    grid-template-columns: 1fr;
   }
 
   .organization-chart-section {

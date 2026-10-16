@@ -14,7 +14,10 @@ const firstQuickLinks = [
 const secondQuickLinks = [
   ["Training Programs", "/training-programmes-at-nitra"],
   ["Research & Development", "/research-develpment-projects"],
-  ["Integrated Textile & Apparel Development Centre (ITADC)", "/integrated-textile-and-apparel-development-centre"],
+  [
+    "Integrated Textile & Apparel Development Centre (ITADC)",
+    "/integrated-textile-apparel-development-centre-itadc/",
+  ],
   ["Careers", "/careers"],
   ["Tenders", "/tenders"],
   ["Contact us", "/contact"],

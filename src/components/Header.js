@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 const navigation = [
@@ -244,6 +246,9 @@ function SearchIcon() {
 }
 
 function getAboutMenuHref(label) {
+  if (label === "Integrated Textile & Apparel Development Centre (ITADC)") {
+    return "/integrated-textile-apparel-development-centre-itadc/";
+  }
   if (label === "Annual Report") {
     return "/annual-report/";
   }
@@ -340,6 +345,12 @@ export default function Header() {
                 className="primary-nav-item has-menu"
                 name="primary-navigation"
                 key={item.label}
+                onMouseEnter={(event) => {
+                  event.currentTarget.open = true;
+                }}
+                onMouseLeave={(event) => {
+                  event.currentTarget.open = false;
+                }}
               >
                 <summary className="primary-nav-link">
                   {item.label}
