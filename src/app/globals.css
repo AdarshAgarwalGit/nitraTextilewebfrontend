@@ -2262,6 +2262,163 @@ summary.primary-nav-link::-webkit-details-marker {
   padding-left: 18px;
 }
 
+.itadc-centre-section {
+  display: grid;
+  gap: 20px;
+}
+
+.itadc-section-heading h2 {
+  margin: 0 0 12px;
+}
+
+.itadc-section-description {
+  max-width: 780px;
+  margin: 0;
+  color: #425668;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.itadc-facility-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.itadc-facility-grid .itadc-card h3 {
+  margin: 0 0 16px;
+  color: #1764a0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.itadc-feature-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.itadc-location-list a[aria-current="page"] {
+  border-color: #1764a0;
+  background: #edf5fb;
+  color: #102a43;
+}
+
+.itadc-contact-card {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.75fr) minmax(0, 1.25fr);
+  gap: 28px;
+  padding: 26px;
+  border: 1px solid #dce4eb;
+  border-left: 4px solid #18a8df;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 6%);
+}
+
+.itadc-contact-card h2 {
+  margin: 0 0 16px;
+  color: #102a43;
+  font-size: 26px;
+}
+
+.itadc-contact-card h3 {
+  margin: 0 0 4px;
+  color: #1764a0;
+  font-size: 18px;
+}
+
+.itadc-contact-role {
+  margin: 0;
+  color: #607487;
+  font-size: 14px;
+}
+
+.itadc-contact-card address {
+  display: grid;
+  gap: 10px;
+  align-content: center;
+  color: #425668;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.itadc-contact-card address p {
+  margin: 0;
+}
+
+.itadc-contact-card address a {
+  color: #1764a0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.itadc-facilities-callout {
+  padding: 20px 24px;
+}
+
+.itadc-facilities-callout h2 {
+  font-size: clamp(19px, 2.2vw, 25px);
+}
+
+.meerut-equipment-card {
+  padding: 20px 24px;
+}
+
+.meerut-equipment-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #34495a;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.meerut-equipment-filter select {
+  min-width: 130px;
+  min-height: 40px;
+  padding: 0 34px 0 12px;
+  border: 1px solid #cbd6df;
+  border-radius: 4px;
+  color: #102a43;
+  background-color: #fff;
+  font: inherit;
+}
+
+.meerut-equipment-table-wrap {
+  overflow-x: auto;
+}
+
+.meerut-equipment-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #34495a;
+  font-size: 15px;
+  text-align: left;
+}
+
+.meerut-equipment-table th,
+.meerut-equipment-table td {
+  padding: 12px 14px;
+  border: 1px solid #dce4eb;
+}
+
+.meerut-equipment-table th {
+  color: #fff;
+  background: #1764a0;
+  font-weight: 700;
+}
+
+.meerut-equipment-table tbody tr:nth-child(even) {
+  background: #f4f8fb;
+}
+
+.meerut-equipment-table th:first-child,
+.meerut-equipment-table td:first-child {
+  width: 76px;
+  text-align: center;
+}
+
 .third-party-inspection-hero {
   background:
     linear-gradient(90deg, rgb(4 35 68 / 84%), rgb(4 35 68 / 60%)),
@@ -4859,6 +5016,10 @@ summary.primary-nav-link::-webkit-details-marker {
   .itadc-service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .itadc-facility-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -4886,13 +5047,29 @@ summary.primary-nav-link::-webkit-details-marker {
   }
 
   .itadc-principles,
-  .itadc-service-grid {
+  .itadc-service-grid,
+  .itadc-facility-grid,
+  .itadc-feature-list,
+  .itadc-contact-card {
     grid-template-columns: 1fr;
   }
 
   .itadc-location-panel,
   .itadc-card {
     padding: 18px;
+  }
+
+  .itadc-contact-card {
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .meerut-equipment-card {
+    padding: 16px;
+  }
+
+  .meerut-equipment-table {
+    min-width: 560px;
   }
 
   .itadc-resources ul {

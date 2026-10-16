@@ -118,7 +118,7 @@ export default function IntegratedTextileApparelDevelopmentCentrePage() {
               <div className="itadc-location-list">
                 {centreLocations.map(([name, slug]) => (
                   <a
-                    href={`https://nitratextile.org/${slug}-powerloom-service-center/`}
+                    href={`/${slug}-powerloom-service-center/`}
                     key={name}
                   >
                     {name}
