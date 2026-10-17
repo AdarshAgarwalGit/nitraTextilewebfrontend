@@ -71,7 +71,7 @@ export default function Home() {
             <span className="home-image-accent" aria-hidden="true" />
             <div className="home-photo home-photo-primary">
               <Image
-                src="/Images/nitra-campus-1.png"
+                src="/Images/nitra%20building%20image.jpeg"
                 alt="The Northern India Textile Research Association campus"
                 fill
                 priority
@@ -80,7 +80,7 @@ export default function Home() {
             </div>
             <div className="home-photo home-photo-secondary" aria-hidden="true">
               <Image
-                src="/Images/nitra-campus-1.png"
+                src="/Images/nitra%20building%20image.jpeg"
                 alt=""
                 fill
                 sizes="(max-width: 760px) 48vw, 22vw"
