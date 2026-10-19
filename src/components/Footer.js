@@ -6,7 +6,7 @@ const firstQuickLinks = [
   ["Consultancy", "/consultancy"],
   ["Infrastructure", "/workshops"],
   ["News Bulletin", "/new-bulletin"],
-  ["Publications", "/research-papers"],
+  ["Publications", "/annual-report"],
   ["Photo / Video Gallery", "/photo-video-gallery/"],
   ["Testing", "/quality-evaluation-and-testing-services"],
 ];
