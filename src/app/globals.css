@@ -562,9 +562,17 @@ a:focus-visible {
 
 .campus-mark {
   display: inline-flex;
-  flex: 0 0 80px;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: flex-start;
+}
+
+.campus-mark-image {
+  display: block;
+  width: auto;
+  height: 52px;
+  max-width: 190px;
+  object-fit: contain;
 }
 
 .campus-mark-seal,
@@ -1082,17 +1090,25 @@ summary.primary-nav-link::-webkit-details-marker {
 }
 
 .home-service-list a > span {
-  display: inline-grid;
+  display: inline-flex;
   width: 13px;
   height: 13px;
   flex: 0 0 13px;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   color: #fff;
   background: #ff5554;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1;
+  font-size: 0;
+}
+
+.home-service-list a > span::before {
+  width: 4px;
+  height: 4px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  content: "";
+  transform: translateX(-1px) rotate(45deg);
 }
 
 .home-intro-actions {

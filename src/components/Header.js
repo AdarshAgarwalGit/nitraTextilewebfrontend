@@ -92,11 +92,11 @@ const navigation = [
 function CampusMark() {
   return (
     <Link className="campus-mark" href="/" aria-label="NITRA Technical Campus home">
-      <span className="campus-mark-seal" aria-hidden="true">
-        <span>TECHNICAL</span>
-        <strong>nitra</strong>
-        <span>CAMPUS</span>
-      </span>
+      <img
+        className="campus-mark-image"
+        src="/Images/nitra-textile-logo.png"
+        alt="NITRA Technical Campus"
+      />
     </Link>
   );
 }
