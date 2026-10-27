@@ -17,7 +17,7 @@ export default function WhoIsWhoProfile({ showReadMore = false }) {
         <h2 id="about-who-title">Dr. M.S.Parmar</h2>
         <p className="about-who-role">Director General</p>
         <p className="about-who-description">
-          Dr. M.S.Parmar, Director General, working at NITRA for the last 32 years in various capacities. His main areas of expertise are Textile Chemistry, Protective Textiles, unconventional fibres and Quality Control of Textiles. Besides this, he is also looking after Heat & Fire Laboratory and Chemical Laboratory.
+          Dr. M.S. Parmar, Director General, has been working at NITRA for the last 32 years in various capacities. He has been Director NITRA for about two  years. He has also been Head of Chemical Quality Evaluation Division, Research & Development (Products) Division and Polymer & Technical Textiles Div. He has been coordinating COE-PROTECH activities. His main areas of expertise are Textile Chemistry, Protective & Automotive Textiles, unconventional fibres and Quality Control of Textiles. Besides this, he has also been instrumental in establishing Heat & Flame Lab and the Microbiology Lab. As Director (Labs), he has looked after all seven NABL accredited/BIS recognized labs of NITRA. His recent research work on Milkweed Fibres and the development of Technical Textiles out of these fibres has earned many laurels for NITRA and the textile fraternity. He is one of the renowned textile researchers in the country.
         </p>
       </div>
 
