@@ -75,7 +75,8 @@ export default function Home() {
                 alt="The Northern India Textile Research Association campus"
                 fill
                 priority
-                sizes="(max-width: 760px) 90vw, 40vw"
+                quality={90}
+                sizes="(max-width: 760px) 90vw, (max-width: 1200px) 45vw, 560px"
               />
             </div>
             <div className="home-photo home-photo-secondary" aria-hidden="true">
@@ -83,6 +84,7 @@ export default function Home() {
                 src="/Images/nitra%20building%20image.jpeg"
                 alt=""
                 fill
+                quality={90}
                 sizes="(max-width: 760px) 48vw, 22vw"
               />
             </div>
