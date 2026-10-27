@@ -28,7 +28,7 @@ export default function WhoIsWhoProfile({ showReadMore = false }) {
           <span className="about-social-icon facebook" aria-label="Facebook">f</span>
           <span className="about-social-icon twitter" aria-label="Twitter">
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M22 5.9a8 8 0 0 1-2.36.65 4.12 4.12 0 0 0 1.8-2.27 8.2 8.2 0 0 1-2.6.99A4.08 4.08 0 0 0 11.8 8.05c0 .32.04.64.11.94a11.58 11.58 0 0 1-8.4-4.26 4.1 4.1 0 0 0 1.27 5.46 4.03 4.03 0 0 1-1.85-.51v.05a4.1 4.1 0 0 0 3.28 4.01 4.1 4.1 0 0 1-1.84.07 4.1 4.1 0 0 0 3.82 2.84A8.2 8.2 0 0 1 2.1 18.4c-.33 0-.65-.02-.97-.06A11.55 11.55 0 0 0 7.4 20.1c7.56 0 11.7-6.26 11.7-11.7v-.53A8.4 8.4 0 0 0 22 5.9Z" />
+              <path d="M18.9 1.5h3.68l-8.04 9.19L24 22.5h-7.41l-5.8-7.59-6.64 7.59H.47l8.6-9.83L0 1.5h7.6l5.24 6.93zm-1.29 19.33h2.04L6.49 3.55H4.3z" />
             </svg>
           </span>
           <span className="about-social-icon youtube" aria-label="YouTube">

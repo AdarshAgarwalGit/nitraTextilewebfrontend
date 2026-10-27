@@ -48,7 +48,7 @@ export default function HomeMoUsSection() {
   return (
     <section className="home-mous-section" aria-labelledby="home-mous-title">
       <div className="home-press-divider" aria-hidden="true" />
-      <h2 id="home-mous-title">NITRA in MoUs</h2>
+      <h2 id="home-mous-title">MoUs Signed with Industry Partners</h2>
 
       <div className="home-mous-carousel" aria-roledescription="carousel">
         <button
@@ -75,7 +75,8 @@ export default function HomeMoUsSection() {
                 alt={alt}
                 width={635}
                 height={395}
-                sizes="(max-width: 700px) 100vw, (max-width: 1050px) 33vw, 338px"
+                quality={90}
+                sizes="(max-width: 700px) 100vw, (max-width: 1050px) 33vw, 380px"
               />
             </a>
           ))}
