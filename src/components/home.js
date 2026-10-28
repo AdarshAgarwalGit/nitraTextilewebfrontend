@@ -10,6 +10,16 @@ import Image from "next/image";
 
 const newsItems = [
   {
+    title: "Training Calendar 2026-27",
+    href: "/PDF/Training-Calendar-2026-27-1.pdf",
+    openInNewTab: true,
+  },
+  {
+    title: "TESTING SERVICES FOR FOOD PRODUCTS at NITRA",
+    href: "/Images/TESTING%20SERVICES%20FOR%20FOOD%20PRODUCTS%20at%20NITRA.jpg",
+    openInNewTab: true,
+  },
+  {
     title: "Review Meeting on New Age Fibers at NITRA, Ghaziabad",
     href: "/review-meeting-on-new-age-fibers-at-nitra-ghaziabad/",
   },
@@ -24,7 +34,7 @@ const newsItems = [
   {
     title: "Training Programmes Offered by NITRA",
     href: "/training-programmes-offered-by-nitra/",
-  },
+  }  
 ];
 
 const services = [
@@ -47,17 +57,24 @@ export default function Home() {
           <span className="home-news-label">News</span>
           <div className="home-news-window">
             <div className="home-news-track">
-              {newsItems.map(({ title, href }) => (
-                <a href={href} key={title}>
+              {newsItems.map(({ title, href, openInNewTab }) => (
+                <a
+                  href={href}
+                  key={title}
+                  target={openInNewTab ? "_blank" : undefined}
+                  rel={openInNewTab ? "noopener noreferrer" : undefined}
+                >
                   {title}
                 </a>
               ))}
-              {newsItems.map(({ title, href }) => (
+              {newsItems.map(({ title, href, openInNewTab }) => (
                 <a
                   href={href}
                   key={`${title}-repeat`}
                   tabIndex={-1}
                   aria-hidden="true"
+                  target={openInNewTab ? "_blank" : undefined}
+                  rel={openInNewTab ? "noopener noreferrer" : undefined}
                 >
                   {title}
                 </a>
