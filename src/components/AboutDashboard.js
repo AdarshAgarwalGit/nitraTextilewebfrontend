@@ -7,6 +7,18 @@ const impactStats = [
 
 const latestNews = [
   {
+    title: "Training Calendar 2026-27",
+    age: "New",
+    href: "/PDF/Training-Calendar-2026-27-1.pdf",
+    openInNewTab: true,
+  },
+  {
+    title: "TESTING SERVICES FOR FOOD PRODUCTS at NITRA",
+    age: "New",
+    href: "/Images/TESTING%20SERVICES%20FOR%20FOOD%20PRODUCTS%20at%20NITRA.jpg",
+    openInNewTab: true,
+  },
+  {
     title: "Training Programmes Offered by NITRA",
     age: "4 weeks ago",
   },
@@ -46,7 +58,7 @@ export default function AboutDashboard() {
             <span className="news-live-indicator" aria-hidden="true" />
             <span className="news-bell" aria-hidden="true">♧</span>
             <strong>Latest Notifications</strong>
-            <span className="news-count">4</span>
+            <span className="news-count">{latestNews.length}</span>
             <span className="news-feed-controls" aria-hidden="true">
               <span>⌃</span>
               <span>Ⅱ</span>
@@ -54,16 +66,41 @@ export default function AboutDashboard() {
             </span>
           </div>
           <div className="news-items">
-            {latestNews.map((item, index) => (
+            {latestNews.map((item) => (
               <article className="news-item" key={item.title}>
                 <div className="news-item-meta">
-                  {index > 0 && <span className="news-new-label">● New</span>}
+                  {item.age === "New" ? (
+                    <span className="news-new-label">● New</span>
+                  ) : null}
                   <span className="news-age">{item.age}</span>
                 </div>
-                <h3>{item.title}</h3>
-                <span className="news-details">
-                  View Details <span aria-hidden="true">→</span>
-                </span>
+                <h3>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      target={item.openInNewTab ? "_blank" : undefined}
+                      rel={item.openInNewTab ? "noopener noreferrer" : undefined}
+                    >
+                      {item.title}
+                    </a>
+                  ) : (
+                    item.title
+                  )}
+                </h3>
+                {item.href ? (
+                  <a
+                    className="news-details"
+                    href={item.href}
+                    target={item.openInNewTab ? "_blank" : undefined}
+                    rel={item.openInNewTab ? "noopener noreferrer" : undefined}
+                  >
+                    View Details <span aria-hidden="true">→</span>
+                  </a>
+                ) : (
+                  <span className="news-details">
+                    View Details <span aria-hidden="true">→</span>
+                  </span>
+                )}
               </article>
             ))}
           </div>

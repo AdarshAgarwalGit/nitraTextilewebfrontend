@@ -2,6 +2,14 @@ import Image from "next/image";
 
 const newsItems = [
   {
+    title: "Training Calendar 2026-27",
+    href: "/PDF/Training-Calendar-2026-27-1.pdf",
+  },
+  {
+    title: "TESTING SERVICES FOR FOOD PRODUCTS at NITRA",
+    href: "/Images/TESTING%20SERVICES%20FOR%20FOOD%20PRODUCTS%20at%20NITRA.jpg",
+  },
+  {
     title: "Review Meeting on New Age Fibers at NITRA, Ghaziabad",
     href: "/review-meeting-on-new-age-fibers-at-nitra-ghaziabad/",
   },
