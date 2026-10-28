@@ -6639,3 +6639,19 @@ summary.primary-nav-link::-webkit-details-marker {
     flex-direction: column;
   }
 }
+
+.about-hero,
+.contact-hero {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(8 55 87 / 78%) 0%,
+      rgb(16 74 111 / 72%) 28%,
+      rgb(16 74 111 / 38%) 48%,
+      rgb(15 63 95 / 36%) 100%
+    ),
+    url("/Images/nitra-image.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
