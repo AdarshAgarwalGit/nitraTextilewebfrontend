@@ -4886,9 +4886,9 @@ summary.primary-nav-link::-webkit-details-marker {
 }
 
 .home-mous-section {
-  width: min(100% - 48px, 1180px);
+  width: 100%;
   margin: 0 auto;
-  padding: 0 0 72px;
+  padding: 0 clamp(14px, 7.8vw, 110px) 72px;
 }
 
 .home-mous-section .home-press-divider {
@@ -4910,15 +4910,15 @@ summary.primary-nav-link::-webkit-details-marker {
 }
 
 .home-mous-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  align-items: start;
+  display: block;
 }
 
 .home-mous-image {
-  display: block;
+  display: flex;
+  height: clamp(260px, 36vw, 440px);
   min-width: 0;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   border: 1px solid #e0eaf1;
   border-radius: 14px;
@@ -4928,15 +4928,11 @@ summary.primary-nav-link::-webkit-details-marker {
 
 .home-mous-image img {
   display: block;
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.35s ease;
-}
-
-.home-mous-image:hover img {
-  transform: scale(1.025);
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .home-mous-arrow {
@@ -5760,18 +5756,8 @@ summary.primary-nav-link::-webkit-details-marker {
     gap: 16px;
   }
 
-  .home-mous-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-mous-image:not(:first-child) {
-    display: none;
-  }
-
-  .home-mous-image img {
-    height: auto;
-    max-height: 420px;
-    object-fit: contain;
+  .home-mous-image {
+    height: clamp(240px, 62vw, 420px);
   }
 
   .home-press-image img {
@@ -6139,9 +6125,12 @@ summary.primary-nav-link::-webkit-details-marker {
     width: min(100% - 36px, 640px);
   }
 
-  .home-press-section,
-  .home-mous-section {
+  .home-press-section {
     width: min(100% - 36px, 640px);
+  }
+
+  .home-mous-section {
+    width: 100%;
   }
 
   .home-who-section {
@@ -6357,9 +6346,12 @@ summary.primary-nav-link::-webkit-details-marker {
     width: calc(100% - 28px);
   }
 
-  .home-press-section,
-  .home-mous-section {
+  .home-press-section {
     width: calc(100% - 28px);
+  }
+
+  .home-mous-section {
+    width: 100%;
     padding-bottom: 42px;
   }
 

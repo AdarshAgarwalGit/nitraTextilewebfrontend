@@ -7,43 +7,53 @@ const mouImages = [
   {
     src: "/Images/Darft-3-NITRA-NEWS-SAMPLE-2-1.png",
     alt: "NITRA representatives exchanging a memorandum of understanding",
+    width: 635,
+    height: 421,
   },
   {
     src: "/Images/Darft-3-NITRA-NEWS-SAMPLE-2.png",
     alt: "NITRA representatives holding a signed memorandum of understanding",
+    width: 635,
+    height: 410,
   },
   {
     src: "/Images/Darft-4-NITRA-NEWS-SAMPLE-2-2.png",
     alt: "NITRA representatives holding a signed agreement",
+    width: 635,
+    height: 395,
   },
   {
     src: "/Images/Darft-4-NITRA-NEWS-SAMPLE-2-1.png",
     alt: "NITRA team members at a memorandum of understanding exchange",
+    width: 472,
+    height: 159,
   },
   {
     src: "/Images/Darft-4-NITRA-NEWS-SAMPLE-2.png",
     alt: "NITRA representatives displaying their signed agreement",
+    width: 635,
+    height: 471,
   },
   {
     src: "/Images/NITRA-News-April-June-2026.png",
     alt: "NITRA team members sharing a publication",
+    width: 635,
+    height: 573,
   },
 ];
 
 export default function HomeMoUsSection() {
-  const [firstImage, setFirstImage] = useState(2);
+  const [currentImage, setCurrentImage] = useState(0);
 
   function showPrevious() {
-    setFirstImage((current) => (current - 1 + mouImages.length) % mouImages.length);
+    setCurrentImage((current) => (current - 1 + mouImages.length) % mouImages.length);
   }
 
   function showNext() {
-    setFirstImage((current) => (current + 1) % mouImages.length);
+    setCurrentImage((current) => (current + 1) % mouImages.length);
   }
 
-  const visibleImages = Array.from({ length: 3 }, (_, offset) => {
-    return mouImages[(firstImage + offset) % mouImages.length];
-  });
+  const image = mouImages[currentImage];
 
   return (
     <section className="home-mous-section" aria-labelledby="home-mous-title">
@@ -61,25 +71,22 @@ export default function HomeMoUsSection() {
         </button>
 
         <div className="home-mous-grid" aria-live="polite">
-          {visibleImages.map(({ src, alt }) => (
-            <a
-              className="home-mous-image"
-              href={src}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={src}
-              aria-label={`Open photo: ${alt}`}
-            >
-              <Image
-                src={src}
-                alt={alt}
-                width={635}
-                height={395}
-                quality={90}
-                sizes="(max-width: 700px) 100vw, (max-width: 1050px) 33vw, 380px"
-              />
-            </a>
-          ))}
+          <a
+            className="home-mous-image"
+            href={image.src}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open photo: ${image.alt}`}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+              quality={90}
+              sizes="(max-width: 635px) 100vw, 635px"
+            />
+          </a>
         </div>
 
         <button
