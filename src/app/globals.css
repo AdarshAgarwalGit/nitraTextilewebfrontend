@@ -1430,6 +1430,29 @@ summary.primary-nav-link::-webkit-details-marker {
   background: #f8fafc;
 }
 
+.about-dashboard .news-items-autoscroll {
+  display: block;
+  overflow: hidden;
+}
+
+.about-dashboard .news-items-track {
+  display: flex;
+  flex-direction: column;
+  animation: news-updates-scroll 32s linear infinite;
+}
+
+.about-dashboard .news-items-group {
+  display: grid;
+  flex: 0 0 auto;
+  gap: 18px;
+  padding-bottom: 18px;
+}
+
+.about-dashboard .news-items-autoscroll:hover .news-items-track,
+.about-dashboard .news-items-autoscroll:focus-within .news-items-track {
+  animation-play-state: paused;
+}
+
 .news-item {
   min-height: 112px;
   padding: 14px 15px;
@@ -4580,6 +4603,22 @@ summary.primary-nav-link::-webkit-details-marker {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .about-dashboard .news-items-autoscroll {
+    overflow-y: auto;
+  }
+
+  .about-dashboard .news-items-track {
+    animation: none;
+  }
+
+  .about-dashboard .news-items-group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .about-dashboard .news-items-group {
+    padding-bottom: 0;
+  }
+
   .home-dashboard .who-social-news-panel .news-items {
     overflow-y: auto;
   }
