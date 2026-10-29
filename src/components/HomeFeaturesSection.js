@@ -67,6 +67,7 @@ const features = [
     imageAlt: "NITRA Technical Campus academic building",
     imageWidth: 1600,
     imageHeight: 730,
+    imageFit: "contain",
     href: "https://www.nitra.ac.in/",
     linkLabel: "Visit us",
     target: "_blank",
@@ -81,7 +82,7 @@ function Feature({ feature, index }) {
       className={`home-feature${isReversed ? " home-feature-reversed" : ""}`}
     >
       <div
-        className={`home-feature-visual${feature.framed ? " home-feature-visual-framed" : ""}`}
+        className={`home-feature-visual${feature.framed ? " home-feature-visual-framed" : ""}${feature.imageFit ? ` home-feature-visual-${feature.imageFit}` : ""}`}
       >
         <Image
           src={feature.image}

@@ -4627,6 +4627,16 @@ summary.primary-nav-link::-webkit-details-marker {
   border-radius: 16px;
 }
 
+.home-feature-visual-contain img {
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.home-feature:hover .home-feature-visual-contain img {
+  transform: none;
+}
+
 .home-feature-copy {
   min-width: 0;
   padding: 0 4px;
