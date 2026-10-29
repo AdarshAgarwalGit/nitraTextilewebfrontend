@@ -785,12 +785,12 @@ summary.primary-nav-link::-webkit-details-marker {
 .home-main {
   width: min(100% - 48px, 1260px);
   margin: 0 auto;
-  padding: 36px 0 72px;
+  padding: 10px 0 75px;
 }
 
 .home-news {
   display: flex;
-  height: 42px;
+  height: 28px;
   align-items: center;
   overflow: hidden;
   border: 1px solid #dceaf3;
@@ -808,12 +808,12 @@ summary.primary-nav-link::-webkit-details-marker {
   z-index: 1;
   display: grid;
   height: 100%;
-  flex: 0 0 82px;
+  flex: 0 0 64px;
   place-items: center;
   border-radius: 11px 0 0 11px;
   color: #fff;
   background: linear-gradient(135deg, #ff5554, #e83d50);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
 }
 
@@ -6411,12 +6411,12 @@ summary.primary-nav-link::-webkit-details-marker {
 
   .home-news {
     margin-bottom: 24px;
-    height: 40px;
+    height: 26px;
     border-radius: 10px;
   }
 
   .home-news-label {
-    flex-basis: 68px;
+    flex-basis: 56px;
     border-radius: 9px 0 0 9px;
   }
 
