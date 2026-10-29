@@ -4775,7 +4775,7 @@ summary.primary-nav-link::-webkit-details-marker {
 }
 
 .home-who-section {
-  width: min(100% - 48px, 1080px);
+  width: 100%;
   margin: 0 auto;
   padding: 28px 30px 22px;
   border: 1px solid #dceaf3;
