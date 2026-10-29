@@ -33,6 +33,30 @@ const facebookEmbedUrl =
 const itmaUrl =
   "https://www.itmaasiasingapore.com/exhibitors/how-to-exhibit?utm_source=SA012NITRA&utm_medium=web-banner-03&utm_campaign=apply-by-12-nov&utm_content=apply-now";
 
+function renderNewsItem(item, isDuplicate = false) {
+  return (
+    <article
+      className="news-item"
+      key={`${item.title}-${isDuplicate ? "duplicate" : "original"}`}
+    >
+      <div className="news-item-meta">
+        <span className="news-new-label">● New</span>
+        <span className="news-age">4 weeks ago</span>
+      </div>
+      <h3>{item.title}</h3>
+      <a
+        className="news-details"
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        tabIndex={isDuplicate ? -1 : undefined}
+      >
+        View Details <span aria-hidden="true">→</span>
+      </a>
+    </article>
+  );
+}
+
 export default function WhoIsWhoSocialNews() {
   return (
     <section
@@ -75,24 +99,15 @@ export default function WhoIsWhoSocialNews() {
               <span>⌄</span>
             </span>
           </div>
-          <div className="news-items">
-            {newsItems.map((item) => (
-              <article className="news-item" key={item.title}>
-                <div className="news-item-meta">
-                  <span className="news-new-label">● New</span>
-                  <span className="news-age">4 weeks ago</span>
-                </div>
-                <h3>{item.title}</h3>
-                <a
-                  className="news-details"
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Details <span aria-hidden="true">→</span>
-                </a>
-              </article>
-            ))}
+          <div className="news-items news-items-autoscroll">
+            <div className="news-items-track">
+              <div className="news-items-group">
+                {newsItems.map((item) => renderNewsItem(item))}
+              </div>
+              <div className="news-items-group" aria-hidden="true">
+                {newsItems.map((item) => renderNewsItem(item, true))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
