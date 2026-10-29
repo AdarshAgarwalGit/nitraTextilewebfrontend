@@ -19,7 +19,8 @@ export default function AboutUsPage() {
         </section>
 
         <section className="about-story">
-          <div className="about-copy"> 
+          <div className="about-copy">
+            <p className="about-kicker">About Us</p>
             <h2>Welcome to NITRA</h2>
             <p>
               Northern India Textile Research Association (NITRA) is one of the prime textile research institutes in the country.  The textile industry and Ministry of Textiles, Govt. of India jointly established NITRA in 1974 for conducting applied scientific research and providing support services to Indian textile industry.  The organization is situated in a 50 acre land at NCR Ghaziabad, near national capital New Delhi. It is certified by ISO 9001:2015.
@@ -34,14 +35,9 @@ export default function AboutUsPage() {
 
           <div className="about-visual">
             <img
-              src="/Images/campusWithLogo.png"
+              src="/Images/aboutUs-image.png"
               alt="NITRA campus and facilities"
             />
-            <div className="about-floating-card">
-              <span>Global reach</span>
-              <strong>Industry excellence</strong>
-              <small>Serving clients across India and overseas markets</small>
-            </div>
           </div>
         </section>
 
