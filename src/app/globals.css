@@ -884,18 +884,9 @@ summary.primary-nav-link::-webkit-details-marker {
   position: absolute;
   inset: 0;
   background-image: url("/Images/nitra-home-slide.jpeg");
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: auto 100%;
-}
-
-.home-slide-image-right .home-slide-image {
-  background-position: right center;
-  background-size: 35% 100%;
-}
-
-.home-slide-image-left .home-slide-image {
-  background-position: left center;
-  background-size: 65% 100%;
+  background-size: cover;
 }
 
 .home-slide.has-image::before {
@@ -6272,14 +6263,6 @@ summary.primary-nav-link::-webkit-details-marker {
     font-size: clamp(32px, 6vw, 46px);
   }
 
-  .home-slide-image-right .home-slide-image {
-    background-size: 48% 100%;
-  }
-
-  .home-slide-image-left .home-slide-image {
-    background-size: 75% 100%;
-  }
-
   .home-intro {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
@@ -6495,14 +6478,6 @@ summary.primary-nav-link::-webkit-details-marker {
 
   .home-slide-next {
     right: 7px;
-  }
-
-  .home-slide-image-right .home-slide-image {
-    background-size: 62% 100%;
-  }
-
-  .home-slide-image-left .home-slide-image {
-    background-size: 88% 100%;
   }
 
   .home-news {
