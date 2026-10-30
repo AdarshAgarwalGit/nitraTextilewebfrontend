@@ -634,10 +634,10 @@ a:focus-visible {
   align-items: center;
   gap: 8px;
   padding: 0 10px;
-  border: 1px solid #dcecf7;
-  border-radius: 9px;
+  border: 1px solid transparent;
+  border-radius: 0;
   color: #17466c;
-  background: linear-gradient(135deg, #f1f8fd, #e8f4fb);
+  background: transparent;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.035em;
@@ -651,13 +651,16 @@ a:focus-visible {
 }
 
 .primary-nav-link:hover,
-.primary-nav-link:focus-visible,
 .primary-nav-item[open] > .primary-nav-link {
-  border-color: #8bc9e8;
+  color: #087fb5;
+}
+
+.primary-nav-link:focus-visible {
+  border-color: transparent;
   color: #064b70;
-  background: linear-gradient(135deg, #d6effb, #e8f7ff);
-  box-shadow: 0 4px 12px rgb(15 93 139 / 10%);
+  background: transparent;
   outline: none;
+  box-shadow: 0 2px 0 #087fb5;
 }
 
 summary.primary-nav-link {
