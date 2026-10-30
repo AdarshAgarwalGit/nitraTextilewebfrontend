@@ -882,6 +882,7 @@ summary.primary-nav-link::-webkit-details-marker {
 
 .home-slide-image {
   position: absolute;
+  z-index: 0;
   inset: 0;
   background-image: url("/Images/nitra-home-slide.jpeg");
   background-position: center;
@@ -891,7 +892,7 @@ summary.primary-nav-link::-webkit-details-marker {
 
 .home-slide.has-image::before {
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   inset: 0;
   background: linear-gradient(
     90deg,
@@ -904,7 +905,7 @@ summary.primary-nav-link::-webkit-details-marker {
 
 .home-slide-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(100% - 120px, 680px);
   margin-left: clamp(20px, 7.5vw, 120px);
   padding: 26px 0;
@@ -1222,6 +1223,11 @@ summary.primary-nav-link::-webkit-details-marker {
   padding: 0 0 44px;
 }
 
+.about-us-hero,
+.about-us-hero .about-hero-inner {
+  min-height: 320px;
+}
+
 .about-breadcrumb {
   margin: 0 0 12px;
   color: rgb(255 255 255 / 85%);
@@ -1241,13 +1247,16 @@ summary.primary-nav-link::-webkit-details-marker {
 }
 
 .about-story {
-  display: grid;
-  width: min(100% - 48px, 1160px);
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  gap: clamp(20px, 2vw, 32px);
-  align-items: start;
+  width: min(100% - 48px, 1200px);
   margin: 0 auto;
-  padding: 72px 0 24px;
+  padding: 58px 0 38px;
+}
+
+.about-story-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
 }
 
 .about-copy {
@@ -1264,10 +1273,10 @@ summary.primary-nav-link::-webkit-details-marker {
 }
 
 .about-copy .about-kicker {
-  margin: 0 0 20px;
-  color: #17212b;
-  font-size: 16px;
-  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
   letter-spacing: 0;
   line-height: 1.5;
   text-transform: none;
@@ -1283,20 +1292,32 @@ summary.primary-nav-link::-webkit-details-marker {
 }
 
 .about-copy h2 {
-  margin: 0 0 30px;
+  margin: 0 0 22px;
   color: #383838;
-  font-size: clamp(36px, 3.25vw, 52px);
-  font-weight: 700;
+  font-size: clamp(34px, 3.25vw, 48px);
+  font-weight: 800;
   line-height: 1.18;
   letter-spacing: -0.035em;
 }
 
 .about-copy p {
-  margin: 0 0 18px;
-  color: #171717;
+  margin: 0 0 20px;
+  color: #344454;
   font-size: 16px;
-  line-height: 1.6;
-  text-align: justify;
+  line-height: 1.75;
+}
+
+.about-story-more {
+  margin-top: 12px;
+  padding-top: 22px;
+  border-top: 1px solid #e5ebf0;
+}
+
+.about-story-more p {
+  margin: 0 0 20px;
+  color: #344454;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
 .about-dashboard {
@@ -5410,6 +5431,105 @@ summary.primary-nav-link::-webkit-details-marker {
   font-size: 16px;
 }
 
+.about-page .about-who {
+  padding: 34px clamp(20px, 4vw, 52px) 28px;
+  border: 1px solid #dceaf3;
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse at 2% 2%, rgb(16 183 231 / 8%), transparent 34%),
+    linear-gradient(135deg, #fff 45%, #f4faff);
+  box-shadow: 0 16px 42px rgb(11 52 82 / 8%);
+}
+
+.about-page .about-who-kicker {
+  display: table;
+  margin: 0 auto 28px;
+  padding: 8px 18px;
+  border: 1px solid #ffd1d5;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fff2f3, #fff);
+  box-shadow: 0 5px 14px rgb(232 61 80 / 9%);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.about-page .about-who-profile {
+  grid-template-columns: 155px minmax(0, 1.15fr) minmax(240px, 0.9fr);
+  gap: clamp(24px, 3vw, 42px);
+  align-items: center;
+  padding: 0 10px 28px;
+}
+
+.about-page .about-who-portrait {
+  width: 155px;
+  height: 232px;
+  border: 5px solid #fff;
+  border-radius: 18px;
+  box-shadow:
+    0 0 0 1px #cce5f1,
+    0 16px 32px rgb(7 42 68 / 18%);
+}
+
+.about-page .about-who-bio h2 {
+  margin: 0 0 14px;
+  color: #082c49;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.about-page .about-who-role {
+  display: table;
+  margin-bottom: 14px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: #08749d;
+  background: #e8f7fc;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.about-page .about-who-description {
+  color: #465e70;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.about-page .about-who-details {
+  min-height: auto;
+  padding: 22px;
+  border: 1px solid #d7eaf4;
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(16 183 231 / 10%), transparent 58%),
+    linear-gradient(145deg, #f0f9fd, #fff);
+  box-shadow: 0 10px 24px rgb(7 42 68 / 6%);
+}
+
+.about-page .about-who-social {
+  justify-content: flex-start;
+  margin: 24px 0 16px;
+  gap: 12px;
+}
+
+.about-page .about-social-icon {
+  box-shadow: 0 5px 12px rgb(7 42 68 / 14%);
+}
+
+.about-page .about-who-read-more,
+.about-page .about-who-footer a {
+  border-radius: 8px;
+  background: linear-gradient(135deg, #10b7e7, #0787bd);
+  box-shadow: 0 7px 16px rgb(7 140 199 / 18%);
+}
+
+.about-page .about-who-footer {
+  padding-top: 20px;
+  border-top-color: #dceaf3;
+}
+
 .about-visual {
   position: relative;
   display: flex;
@@ -5429,12 +5549,14 @@ summary.primary-nav-link::-webkit-details-marker {
 }
 
 .about-visual img {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 0;
+  border-radius: 20px;
   object-fit: contain;
-  box-shadow: none;
+  box-shadow: 0 20px 42px rgb(9 33 52 / 14%);
 }
 
 .about-floating-card {
@@ -5507,7 +5629,7 @@ summary.primary-nav-link::-webkit-details-marker {
 }
 
 @media (max-width: 920px) {
-  .about-story,
+  .about-story-intro,
   .about-features,
   .about-dashboard {
     grid-template-columns: 1fr;
@@ -5539,6 +5661,15 @@ summary.primary-nav-link::-webkit-details-marker {
     padding: 24px 0 0;
     border-top: 1px solid #d7d7d7;
     border-left: 0;
+  }
+
+  .about-page .about-who-profile {
+    grid-template-columns: 155px minmax(0, 1fr);
+  }
+
+  .about-page .about-who-details {
+    padding: 22px;
+    border: 1px solid #d7eaf4;
   }
 
   .about-who-social {
@@ -5972,6 +6103,10 @@ summary.primary-nav-link::-webkit-details-marker {
     font-size: 15px;
   }
 
+  .about-story-more p {
+    font-size: 15px;
+  }
+
   .news-feed {
     padding: 12px 0;
   }
@@ -6014,6 +6149,35 @@ summary.primary-nav-link::-webkit-details-marker {
 
   .about-who-details {
     width: 100%;
+  }
+
+  .about-page .about-who-profile {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+    padding: 0 0 24px;
+  }
+
+  .about-page .about-who-bio {
+    text-align: center;
+  }
+
+  .about-page .about-who-bio h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+  }
+
+  .about-page .about-who-role {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .about-page .about-who-details {
+    grid-column: auto;
+  }
+
+  .about-page .about-who-social {
+    justify-content: center;
   }
 
   .about-who-details > p {
@@ -6821,13 +6985,28 @@ summary.primary-nav-link::-webkit-details-marker {
   background-image:
     linear-gradient(
       90deg,
-      rgb(8 55 87 / 78%) 0%,
-      rgb(16 74 111 / 72%) 28%,
-      rgb(16 74 111 / 38%) 48%,
-      rgb(15 63 95 / 36%) 100%
+      rgb(5 35 65 / 92%) 0%,
+      rgb(5 35 65 / 88%) 100%
     ),
     url("/Images/nitra-image.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.about-hero .about-hero-inner,
+.contact-hero .contact-hero-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-hero .about-hero-inner > h1,
+.contact-hero .contact-hero-inner > h1 {
+  order: 0;
+}
+
+.about-hero .about-hero-inner > .about-breadcrumb,
+.contact-hero .contact-hero-inner > .contact-breadcrumb {
+  order: 1;
+  margin: 12px 0 0;
 }
