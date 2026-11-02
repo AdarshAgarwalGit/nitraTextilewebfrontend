@@ -5088,23 +5088,31 @@ summary.primary-nav-link::-webkit-details-marker {
 
 .home-mous-carousel {
   position: relative;
-}
-
-.home-mous-grid {
-  display: block;
-}
-
-.home-mous-image {
-  display: flex;
-  height: clamp(260px, 36vw, 440px);
-  min-width: 0;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  display: grid;
+  height: clamp(276px, 36vw, 440px);
+  padding: 8px;
+  place-items: center;
   border: 1px solid #e0eaf1;
   border-radius: 14px;
   background: #f4f8fb;
   box-shadow: 0 10px 28px rgb(11 52 82 / 8%);
+}
+
+.home-mous-grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+}
+
+.home-mous-image {
+  display: flex;
+  height: 100%;
+  max-width: 100%;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .home-mous-image img {
@@ -6047,8 +6055,8 @@ summary.primary-nav-link::-webkit-details-marker {
     gap: 16px;
   }
 
-  .home-mous-image {
-    height: clamp(240px, 62vw, 420px);
+  .home-mous-carousel {
+    height: clamp(256px, calc(62vw + 16px), 436px);
   }
 
   .home-press-image img {

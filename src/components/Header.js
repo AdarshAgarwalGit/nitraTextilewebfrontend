@@ -271,10 +271,10 @@ function getAboutMenuHref(label) {
     return "/products_development/";
   }
   if (label === "Commercialization of NITRA Developments") {
-    return "/Commercialization%20of%20NITRA%20Developments/";
+    return "/commercialization-of-nitra-developments/";
   }
   if (label === "Instruments Developed") {
-    return "/Instruments-20Developed/";
+    return "/instruments-developed/";
   }
   if (label === "Patent Obtained and Filed") {
     return "/patents-obtained-and-filed/";

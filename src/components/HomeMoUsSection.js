@@ -5,41 +5,29 @@ import { useState } from "react";
 
 const mouImages = [
   {
-    src: "/Images/Darft-3-NITRA-NEWS-SAMPLE-2-1.png",
+    src: "/Images/mou-first.png",
     alt: "NITRA representatives exchanging a memorandum of understanding",
     width: 635,
     height: 421,
   },
   {
-    src: "/Images/Darft-3-NITRA-NEWS-SAMPLE-2.png",
+    src: "/Images/mou-second.jpeg",
     alt: "NITRA representatives holding a signed memorandum of understanding",
     width: 635,
     height: 410,
   },
   {
-    src: "/Images/Darft-4-NITRA-NEWS-SAMPLE-2-2.png",
+    src: "/Images/mou-third.jpeg",
     alt: "NITRA representatives holding a signed agreement",
     width: 635,
     height: 395,
   },
   {
-    src: "/Images/Darft-4-NITRA-NEWS-SAMPLE-2-1.png",
+    src: "/Images/mou-four.png",
     alt: "NITRA team members at a memorandum of understanding exchange",
     width: 472,
     height: 159,
-  },
-  {
-    src: "/Images/Darft-4-NITRA-NEWS-SAMPLE-2.png",
-    alt: "NITRA representatives displaying their signed agreement",
-    width: 635,
-    height: 471,
-  },
-  {
-    src: "/Images/NITRA-News-April-June-2026.png",
-    alt: "NITRA team members sharing a publication",
-    width: 635,
-    height: 573,
-  },
+  }
 ];
 
 export default function HomeMoUsSection() {
