@@ -1066,6 +1066,10 @@ summary.primary-nav-link::-webkit-details-marker {
   object-fit: cover;
 }
 
+.home-photo-secondary img {
+  object-fit: contain;
+}
+
 .home-photo-primary {
   top: 28px;
   left: 24px;
