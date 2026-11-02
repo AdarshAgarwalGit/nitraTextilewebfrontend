@@ -27,7 +27,7 @@ const mouImages = [
     alt: "NITRA team members at a memorandum of understanding exchange",
     width: 472,
     height: 159,
-  }
+  },
 ];
 
 export default function HomeMoUsSection() {
@@ -48,7 +48,12 @@ export default function HomeMoUsSection() {
       <div className="home-press-divider" aria-hidden="true" />
       <h2 id="home-mous-title">MoUs Signed with Industry Partners</h2>
 
-      <div className="home-mous-carousel" aria-roledescription="carousel">
+      <div
+        className="home-mous-carousel"
+        role="group"
+        aria-label="MoUs signed with industry partners"
+        aria-roledescription="carousel"
+      >
         <button
           className="home-mous-arrow home-mous-previous"
           type="button"
@@ -85,6 +90,26 @@ export default function HomeMoUsSection() {
         >
           ›
         </button>
+      </div>
+
+      <div className="home-mous-controls">
+        <div className="home-mous-indicators" role="group" aria-label="Choose a MoU photo">
+          {mouImages.map((item, index) => (
+            <button
+              className="home-mous-indicator"
+              type="button"
+              key={item.src}
+              onClick={() => setCurrentImage(index)}
+              aria-label={`Show MoU photo ${index + 1}`}
+              aria-pressed={currentImage === index}
+            />
+          ))}
+        </div>
+        <p className="home-mous-counter" aria-live="polite">
+          <span>{String(currentImage + 1).padStart(2, "0")}</span>
+          <span className="home-mous-counter-divider">/</span>
+          {String(mouImages.length).padStart(2, "0")}
+        </p>
       </div>
     </section>
   );
