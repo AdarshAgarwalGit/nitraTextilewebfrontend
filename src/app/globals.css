@@ -5137,6 +5137,54 @@ summary.primary-nav-link::-webkit-details-marker {
   object-fit: contain;
 }
 
+.home-pli-preview {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.home-pli-preview h3 {
+  margin: 0;
+  color: #092c48;
+  font-size: clamp(20px, 2.4vw, 26px);
+  line-height: 1.3;
+}
+
+.home-pli-thumbnail {
+  display: grid;
+  width: min(100%, 320px);
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #dce7ef;
+  border-radius: 14px;
+  color: #126c5a;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(9 33 52 / 10%);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.home-pli-thumbnail:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgb(9 33 52 / 16%);
+}
+
+.home-pli-thumbnail:focus-visible {
+  outline: 3px solid #00b887;
+  outline-offset: 3px;
+}
+
+.home-pli-thumbnail img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 .home-mous-arrow {
   position: absolute;
   z-index: 1;

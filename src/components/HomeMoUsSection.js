@@ -111,6 +111,27 @@ export default function HomeMoUsSection() {
           {String(mouImages.length).padStart(2, "0")}
         </p>
       </div>
+
+      <div className="home-pli-preview">
+        <h3>Production Linked Incentive (PLI) Scheme for Textiles</h3>
+        <a
+          className="home-pli-thumbnail"
+          href="/Images/Production%20Linked%20Incentive.jpeg"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open the Production Linked Incentive Scheme for Textiles image"
+        >
+          <Image
+            src="/Images/Production%20Linked%20Incentive.jpeg"
+            alt="Production Linked Incentive (PLI) Scheme for Textiles"
+            width={992}
+            height={1085}
+            quality={90}
+            sizes="(max-width: 640px) 90vw, 320px"
+          />
+          <span>Click to view full-size image</span>
+        </a>
+      </div>
     </section>
   );
 }
