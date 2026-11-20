@@ -1,21 +1,32 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { fetchTenders } from "@/lib/api";
 
-export default function TendersDirectory({ tenders }) {
+export default function TendersDirectory({ tenders: initialTenders = [] }) {
+  const [tendersList, setTendersList] = useState(initialTenders);
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    fetchTenders().then((liveData) => {
+      if (liveData && liveData.length > 0) {
+        setTendersList(liveData);
+      }
+    });
+  }, []);
+
   const filteredTenders = useMemo(() => {
     const query = search.trim().toLocaleLowerCase();
     if (!query) {
-      return tenders;
+      return tendersList;
     }
 
-    return tenders.filter((tender) =>
-      [tender.title, tender.lastDate, tender.extended]
+    return tendersList.filter((tender) =>
+      [tender.title, tender.lastDate, tender.extended, tender.referenceNo]
         .filter(Boolean)
         .some((value) => value.toLocaleLowerCase().includes(query)),
     );
-  }, [search, tenders]);
+  }, [search, tendersList]);
 
   return (
     <section className="tenders-content" aria-label="Tender notices">
@@ -31,7 +42,7 @@ export default function TendersDirectory({ tenders }) {
       </div>
 
       <p className="visually-hidden" aria-live="polite">
-        Showing {filteredTenders.length} of {tenders.length} tender notices.
+        Showing {filteredTenders.length} of {tendersList.length} tender notices.
       </p>
 
       <div className="tenders-table-wrap">
@@ -48,9 +59,10 @@ export default function TendersDirectory({ tenders }) {
           </thead>
           <tbody>
             {filteredTenders.map((tender, index) => {
-              const href = tender.file
-                ? `/PDF/${encodeURIComponent(tender.file)}`
-                : tender.source;
+              let href = tender.file || tender.source;
+              if (href && !href.startsWith("http") && !href.startsWith("/")) {
+                href = `/PDF/${encodeURIComponent(href)}`;
+              }
 
               return (
                 <tr key={`${tender.title}-${tender.lastDate}-${index}`}>

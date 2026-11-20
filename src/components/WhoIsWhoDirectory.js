@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { fetchTeamMembers } from "@/lib/api";
 
-const employees = [
+const initialEmployees = [
   {
     name: "Dr. M.S. Parmar",
     designation: "Director General",
@@ -98,99 +99,24 @@ const employees = [
     designation: "Scientific Officer",
     qualification: "Diploma in Textile Technology, B.Tech., M.Tech. (Textile Technology)",
   },
-  {
-    name: "Mr. Kuldeep Yadav",
-    designation: "Scientific Officer",
-    qualification: "B.Tech., M.Tech. (Fibres & Textile Processing Technology)",
-  },
-  {
-    name: "Mr. Partha Basu",
-    designation: "Public Relations Officer",
-    qualification: "B.Com., PG Diploma in Advertising & Marketing Management",
-  },
-  {
-    name: "Mr. Atul Baijal",
-    designation: "Deputy Manager (Accounts)",
-    qualification: "M.Com., LL.B., MBA",
-  },
-  {
-    name: "Mr. Sachin Bhatt",
-    designation: "Senior Accounts Officer",
-    qualification: "Chartered Accountant",
-  },
-  {
-    name: "Mr. Kuldeep Singh",
-    designation: "Junior Scientific Officer",
-    qualification: "M.Sc., PG Diploma in QC & ISO 9000, ATA",
-  },
-  {
-    name: "Mr. Swami Sharan",
-    designation: "Junior Scientific Officer",
-    qualification: "M.Sc. (Chemistry), ATA",
-  },
-  {
-    name: "Mr. Sanjay Gupta",
-    designation: "Senior Scientific Officer",
-    qualification: "M.Sc.",
-  },
-  {
-    name: "Mr. Adarsh Gautam",
-    designation: "Junior Scientific Officer",
-    qualification: "B.Tech. (Textile Technology)",
-  },
-  {
-    name: "Mr. Abbas Raza",
-    designation: "Librarian",
-    qualification: "B.Sc., M.A., DPA, PGDCA, MLISC",
-  },
-  {
-    name: "Mr. Rajeev Singh Rawat",
-    designation: "Junior Accounts Officer",
-    qualification: "B.Com.",
-  },
-  {
-    name: "Ms. Seema Sharma",
-    designation: "Junior Scientific Officer",
-    qualification: "M.Sc.",
-  },
-  {
-    name: "Mr. V. Satyanarayana",
-    designation: "Junior Scientific Officer",
-    qualification: "SSC, ITI, ATA",
-  },
-  {
-    name: "Mr. Yogesh Kumar",
-    designation: "Junior Scientific Officer",
-    qualification: "M.Sc. (Chemistry), ATA",
-  },
-  {
-    name: "Mr. S.A.A. Rizvi",
-    designation: "Junior Purchase Officer",
-    qualification: "B.Sc., PGDCA, MBA",
-  },
 ];
 
-const designations = [
+const defaultDesignations = [
   "Director General",
   "Director",
   "Deputy Director",
   "Assistant Director",
-  "Project Manager",
-  "Junior Scientific Officer",
-  "Faculty",
   "Principal Scientific Officer",
   "Senior Scientific Officer",
   "Scientific Officer",
-  "Public Relations Officer",
-  "Deputy Manager (Accounts)",
+  "Polymer Technologist",
 ];
 
 function matchesDesignation(employeeDesignation, filter) {
   if (filter === "all") {
     return true;
   }
-
-  const designation = employeeDesignation.toUpperCase();
+  const designation = (employeeDesignation || "").toUpperCase();
   const selected = filter.toUpperCase();
 
   return (
@@ -202,7 +128,19 @@ function matchesDesignation(employeeDesignation, filter) {
 }
 
 export default function WhoIsWhoDirectory() {
+  const [employees, setEmployees] = useState(initialEmployees);
   const [designationFilter, setDesignationFilter] = useState("all");
+
+  useEffect(() => {
+    async function loadData() {
+      const live = await fetchTeamMembers("who_is_who");
+      if (live && live.length > 0) {
+        setEmployees(live);
+      }
+    }
+    loadData();
+  }, []);
+
   const filteredEmployees = employees.filter((employee) =>
     matchesDesignation(employee.designation, designationFilter),
   );
@@ -217,7 +155,7 @@ export default function WhoIsWhoDirectory() {
           onChange={(event) => setDesignationFilter(event.target.value)}
         >
           <option value="all">All</option>
-          {designations.map((designation) => (
+          {defaultDesignations.map((designation) => (
             <option key={designation} value={designation}>
               {designation}
             </option>
@@ -241,11 +179,11 @@ export default function WhoIsWhoDirectory() {
           <tbody>
             {filteredEmployees.length > 0 ? (
               filteredEmployees.map((employee, index) => (
-                <tr key={employee.name}>
+                <tr key={`${employee.name}-${index}`}>
                   <td>{index + 1}</td>
                   <td>{employee.name}</td>
                   <td>{employee.designation}</td>
-                  <td>{employee.qualification}</td>
+                  <td>{employee.qualification || "—"}</td>
                 </tr>
               ))
             ) : (

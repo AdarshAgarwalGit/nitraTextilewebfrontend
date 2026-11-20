@@ -1,5 +1,10 @@
 const tenders = [
   {
+    title: "Sealed Bids are invited for purchase of ‘HandHeld RETRO REFLECTOMETER’",
+    lastDate: "4th December, 2026 upto 12.00 pm",
+    file: "tender-for-handheld-retro-reflectometer.docx",
+  },
+  {
     title: "Sealed Bids are invited for purchase of ‘Contact Angle Goniometer’",
     lastDate: "29th May, 2026 upto 12.00 pm",
     extended: "04-06-2026 (Thursday) at 03.00 pm",

@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Link from "next/link";
+import PatentsDirectory from "@/components/PatentsDirectory";
 
 const patentsGranted = [
   "A water saving hank dyeing machine for dyeing textile yarn. Patent No. 567030 dt. 30.05.2025; Patent Application No. 201911015524 dt. 18.04.2019 (Inventor: Dr. M.S. Parmar)",
@@ -51,32 +52,6 @@ const trademarksFiled = [
   "Indian Trademark Application No. 7102666 for the mark “CLOCell (device)” in class 22 in the name of Northern India Textile Research Association filed with the Trademark Registration Office, Govt. of India.",
 ];
 
-function PatentTable({ title, entries }) {
-  return (
-    <section className="patent-section" aria-label={title}>
-      <h2>{title}</h2>
-      <div className="patent-table-wrap">
-        <table className="patent-table">
-          <thead>
-            <tr>
-              <th scope="col">S. No.</th>
-              <th scope="col">{title}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {entries.map((entry, index) => (
-              <tr key={entry}>
-                <td>{index + 1}.</td>
-                <td>{entry}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </section>
-  );
-}
-
 export const metadata = {
   title: "Patents Obtained and Filed | NITRA",
   description:
@@ -97,11 +72,11 @@ export default function PatentsObtainedAndFiledPage() {
           </div>
         </section>
 
-        <div className="patents-content">
-          <PatentTable title="Patents Granted" entries={patentsGranted} />
-          <PatentTable title="Patents Filed" entries={patentsFiled} />
-          <PatentTable title="Trademark Filed" entries={trademarksFiled} />
-        </div>
+        <PatentsDirectory
+          initialGranted={patentsGranted}
+          initialFiled={patentsFiled}
+          initialTrademarks={trademarksFiled}
+        />
       </main>
       <Footer />
     </>

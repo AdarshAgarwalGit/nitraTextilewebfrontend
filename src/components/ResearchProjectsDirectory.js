@@ -1,8 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { fetchResearchProjects } from "@/lib/api";
 
-const projects = [
+const initialProjects = [
   {
     id: "202401",
     title:
@@ -13,7 +14,7 @@ const projects = [
   {
     id: "202402",
     title:
-      "Cellulose-based Indigenous High ClO Value and Low-Density Surface Modified Natural Fibre for Developing Thermal Layers of Extreme Cold Weather Clothing (Sponsored by NTTM, Ministry of Textiles, Govt. of India)",
+      "Cellulose-based Indigenous High ClO Value and Low-Density Surface Modified Natural Fibre for Developing Thermal layers of Extreme Cold Weather Clothing (Sponsored by NTTM, Ministry of Textiles, Govt. of India)",
     year: "2024",
     report: "/wp-content/uploads/2024/11/RD-202324.pdf",
   },
@@ -129,8 +130,7 @@ const projects = [
     title:
       "Setting up of Common Effluent Treatment Plant (CETP) -150 KLD at Ajrakhpur, Bhuj (Sponsored by Ministry of Textiles, Govt. of India)",
     year: "2021",
-    report:
-      "/wp-content/uploads/2024/01/Common-Effluent-Treatment-Plant.pdf",
+    report: "/wp-content/uploads/2024/01/Common-Effluent-Treatment-Plant.pdf",
   },
   { id: "202102", title: "Development of coat combat disruptive", year: "2021" },
   {
@@ -253,19 +253,36 @@ const projects = [
 ];
 
 export default function ResearchProjectsDirectory() {
+  const [projects, setProjects] = useState(initialProjects);
   const [year, setYear] = useState("All");
   const [search, setSearch] = useState("");
-  const years = [...new Set(projects.map((project) => project.year))];
+
+  useEffect(() => {
+    async function loadData() {
+      const live = await fetchResearchProjects();
+      if (live && live.length > 0) {
+        setProjects(live);
+      }
+    }
+    loadData();
+  }, []);
+
+  const years = useMemo(() => {
+    return [...new Set(projects.map((project) => project.year).filter(Boolean))].sort().reverse();
+  }, [projects]);
+
   const filteredProjects = useMemo(() => {
     const query = search.trim().toLowerCase();
     return projects.filter((project) => {
       const matchesYear = year === "All" || project.year === year;
       const matchesSearch =
         !query ||
-        `${project.id} ${project.title} ${project.year}`.toLowerCase().includes(query);
+        `${project.id || ""} ${project.title || ""} ${project.year || ""}`
+          .toLowerCase()
+          .includes(query);
       return matchesYear && matchesSearch;
     });
-  }, [search, year]);
+  }, [projects, search, year]);
 
   return (
     <div className="research-project-directory">
@@ -273,7 +290,7 @@ export default function ResearchProjectsDirectory() {
         <label>
           <span>Year:</span>
           <select value={year} onChange={(event) => setYear(event.target.value)}>
-            <option value="All">All</option>
+            <option value="All">All Years</option>
             {years.map((projectYear) => (
               <option key={projectYear} value={projectYear}>
                 {projectYear}
@@ -302,11 +319,11 @@ export default function ResearchProjectsDirectory() {
             </tr>
           </thead>
           <tbody>
-            {filteredProjects.map((project) => (
-              <tr key={project.id}>
-                <td>{project.id}</td>
+            {filteredProjects.map((project, idx) => (
+              <tr key={project.id || idx}>
+                <td>{project.id || idx + 1}</td>
                 <td>{project.title}</td>
-                <td>{project.year}</td>
+                <td>{project.year || "—"}</td>
                 <td>
                   {project.report ? (
                     <a href={project.report} target="_blank" rel="noopener noreferrer">

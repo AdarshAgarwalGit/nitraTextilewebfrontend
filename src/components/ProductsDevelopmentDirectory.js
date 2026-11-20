@@ -1,8 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { fetchProductsDeveloped } from "@/lib/api";
 
-const products = [
+const initialProducts = [
   "Molten metal splash resistant workwear for Steel Industry workers",
   "Jute/ Polypropylene composite headliner & parcel tray for automobiles",
   "Re-generated Cellulosic Fibre from Indian was developed indigenously",
@@ -34,13 +35,25 @@ const products = [
 ];
 
 export default function ProductsDevelopmentDirectory() {
+  const [products, setProducts] = useState(initialProducts);
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    async function loadData() {
+      const live = await fetchProductsDeveloped();
+      if (live && live.length > 0) {
+        setProducts(live);
+      }
+    }
+    loadData();
+  }, []);
+
   const filteredProducts = useMemo(() => {
     const query = search.trim().toLowerCase();
     return query
       ? products.filter((product) => product.toLowerCase().includes(query))
       : products;
-  }, [search]);
+  }, [products, search]);
 
   return (
     <section className="products-development-directory" aria-label="NITRA products">

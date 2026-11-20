@@ -7,6 +7,7 @@ import HomeMoUsSection from "./HomeMoUsSection";
 import HomeFeaturesSection from "./HomeFeaturesSection";
 import HomeWhoIsWhoSection from "./HomeWhoIsWhoSection";
 import Image from "next/image";
+import { fetchAnnouncements } from "@/lib/api";
 
 const newsItems = [
   {
@@ -48,7 +49,10 @@ const services = [
   ["Centre of Excellence (CoE).", "/focus-incubation-centre/"],
 ];
 
-export default function Home() {
+export default async function Home() {
+  const dynamicNews = await fetchAnnouncements();
+  const displayNews = dynamicNews && dynamicNews.length > 0 ? dynamicNews : newsItems;
+
   return (
     <>
       <Header />
@@ -57,20 +61,20 @@ export default function Home() {
           <span className="home-news-label">News</span>
           <div className="home-news-window">
             <div className="home-news-track">
-              {newsItems.map(({ title, href, openInNewTab }) => (
+              {displayNews.map(({ title, href, openInNewTab }, idx) => (
                 <a
                   href={href}
-                  key={title}
+                  key={`${title}-${idx}`}
                   target={openInNewTab ? "_blank" : undefined}
                   rel={openInNewTab ? "noopener noreferrer" : undefined}
                 >
                   {title}
                 </a>
               ))}
-              {newsItems.map(({ title, href, openInNewTab }) => (
+              {displayNews.map(({ title, href, openInNewTab }, idx) => (
                 <a
                   href={href}
-                  key={`${title}-repeat`}
+                  key={`${title}-repeat-${idx}`}
                   tabIndex={-1}
                   aria-hidden="true"
                   target={openInNewTab ? "_blank" : undefined}

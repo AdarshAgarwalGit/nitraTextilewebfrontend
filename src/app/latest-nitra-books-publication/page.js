@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Link from "next/link";
-import Image from "next/image";
+import BooksDirectory from "@/components/BooksDirectory";
 
 const publications = [
   { title: "SA 8000", price: "Rs 30/-" },
@@ -32,28 +32,7 @@ export default function LatestNitraBooksPublicationPage() {
           </div>
         </section>
 
-        <section className="latest-books-content" aria-label="Latest NITRA publications">
-          <div className="latest-books-feature">
-            <Image
-              src="/Images/latest-nitra-books-publication-cover.jpeg"
-              alt="NITRA book publication cover"
-              width="833"
-              height="1024"
-            />
-          </div>
-
-          <div className="latest-books-list">
-            {publications.map((publication) => (
-              <article className="latest-book-card" key={publication.title}>
-                <h2>{publication.title}</h2>
-                <p>{publication.price}</p>
-                <span className="latest-book-unavailable">
-                  Publication PDF currently unavailable
-                </span>
-              </article>
-            ))}
-          </div>
-        </section>
+        <BooksDirectory initialPublications={publications} />
       </main>
       <Footer />
     </>

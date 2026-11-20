@@ -4,6 +4,7 @@ import MeerutEquipmentTable from "@/components/MeerutEquipmentTable";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { powerloomCentres } from "./powerloomCentreData";
+import { fetchPowerloomCentre } from "@/lib/api";
 
 const locations = Object.entries(powerloomCentres).map(([slug, centre]) => ({
   slug,
@@ -25,8 +26,10 @@ const cadFacilities = [
   "Training on the C.A.D. system.",
 ];
 
-export default function PowerloomServiceCenterPage({ slug }) {
-  const centre = powerloomCentres[slug];
+export default async function PowerloomServiceCenterPage({ slug }) {
+  const dynamicCentre = await fetchPowerloomCentre(slug);
+  const staticCentre = powerloomCentres[slug];
+  const centre = dynamicCentre ? { ...staticCentre, ...dynamicCentre } : staticCentre;
 
   if (!centre) {
     notFound();

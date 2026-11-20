@@ -7,9 +7,12 @@ import {
   testingLaboratories,
   testingLaboratoryLinks,
 } from "@/components/testingLaboratoryData";
+import { fetchTestingLaboratory } from "@/lib/api";
 
-export default function TestingLaboratoryPage({ slug }) {
-  const laboratory = testingLaboratories[slug];
+export default async function TestingLaboratoryPage({ slug }) {
+  const dynamicLab = await fetchTestingLaboratory(slug);
+  const staticLab = testingLaboratories[slug];
+  const laboratory = dynamicLab ? { ...staticLab, ...dynamicLab } : staticLab;
 
   if (!laboratory) {
     notFound();

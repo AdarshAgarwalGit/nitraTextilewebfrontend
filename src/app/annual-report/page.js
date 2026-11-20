@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Link from "next/link";
+import AnnualReportsDirectory from "@/components/AnnualReportsDirectory";
 
 const annualReports = [
   { title: "Annual Report 2024–25", year: "2025", file: "Annual-Report-24-25.pdf" },
@@ -35,35 +36,7 @@ export default function AnnualReportPage() {
 
         <section className="annual-report-content" aria-labelledby="annual-report-heading">
           <h2 id="annual-report-heading">NITRA Annual Reports</h2>
-          <div className="annual-report-table-wrap">
-            <table className="annual-report-table">
-              <caption className="visually-hidden">NITRA Annual Reports</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Name</th>
-                  <th scope="col">Year</th>
-                  <th scope="col">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {annualReports.map((report) => (
-                  <tr key={report.file}>
-                    <td>{report.title}</td>
-                    <td>{report.year}</td>
-                    <td>
-                      <a
-                        href={`/PDF/${report.file}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        View / Download
-                      </a>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <AnnualReportsDirectory initialReports={annualReports} />
         </section>
       </main>
       <Footer />

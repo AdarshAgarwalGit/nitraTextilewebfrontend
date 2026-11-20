@@ -1,18 +1,32 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import bulletins from "@/app/new-bulletin/bulletins.json";
-
-const years = [...new Set(bulletins.map((bulletin) => bulletin.year))];
+import { useEffect, useMemo, useState } from "react";
+import staticBulletins from "@/app/new-bulletin/bulletins.json";
+import { fetchBulletins } from "@/lib/api";
 
 export default function BulletinDirectory() {
+  const [bulletinsList, setBulletinsList] = useState(staticBulletins);
   const [selectedYear, setSelectedYear] = useState("all");
+
+  useEffect(() => {
+    fetchBulletins().then((liveData) => {
+      if (liveData && liveData.length > 0) {
+        setBulletinsList(liveData);
+      }
+    });
+  }, []);
+
+  const years = useMemo(
+    () => [...new Set(bulletinsList.map((bulletin) => bulletin.year))],
+    [bulletinsList]
+  );
+
   const visibleBulletins = useMemo(
     () =>
       selectedYear === "all"
-        ? bulletins
-        : bulletins.filter((bulletin) => bulletin.year === selectedYear),
-    [selectedYear],
+        ? bulletinsList
+        : bulletinsList.filter((bulletin) => bulletin.year === selectedYear),
+    [selectedYear, bulletinsList],
   );
 
   return (
@@ -49,32 +63,39 @@ export default function BulletinDirectory() {
             </tr>
           </thead>
           <tbody>
-            {visibleBulletins.map((bulletin) => (
-              <tr key={`${bulletin.year}-${bulletin.month}`}>
-                <td>{bulletin.month}</td>
-                <td>{bulletin.year}</td>
-                <td>
-                  {bulletin.file ? (
-                    <a
-                      href={`/PDF/${bulletin.file}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View PDF
-                    </a>
-                  ) : (
-                    <span className="bulletin-unavailable">
-                      PDF currently unavailable
-                    </span>
-                  )}
-                </td>
-              </tr>
-            ))}
+            {visibleBulletins.map((bulletin, idx) => {
+              let href = bulletin.file;
+              if (href && !href.startsWith("http") && !href.startsWith("/")) {
+                href = `/PDF/${bulletin.file}`;
+              }
+
+              return (
+                <tr key={`${bulletin.year}-${bulletin.month}-${idx}`}>
+                  <td>{bulletin.month}</td>
+                  <td>{bulletin.year}</td>
+                  <td>
+                    {href ? (
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View PDF
+                      </a>
+                    ) : (
+                      <span className="bulletin-unavailable">
+                        PDF currently unavailable
+                      </span>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
       <p className="bulletin-results" aria-live="polite">
-        Showing {visibleBulletins.length} of {bulletins.length} bulletins
+        Showing {visibleBulletins.length} of {bulletinsList.length} bulletins
       </p>
     </section>
   );

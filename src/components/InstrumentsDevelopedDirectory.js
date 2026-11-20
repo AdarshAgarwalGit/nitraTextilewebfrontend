@@ -1,8 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { fetchInstrumentsDeveloped } from "@/lib/api";
 
-const instruments = [
+const initialInstruments = [
   "An apparatus to determine dust resistance characteristics of sheeting Material",
   "An apparatus to determine Air pollutant gas adsorption capability of fabric",
   "Stab and impact resistance tester",
@@ -29,13 +30,25 @@ const instruments = [
 ];
 
 export default function InstrumentsDevelopedDirectory() {
+  const [instruments, setInstruments] = useState(initialInstruments);
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    async function loadData() {
+      const live = await fetchInstrumentsDeveloped();
+      if (live && live.length > 0) {
+        setInstruments(live);
+      }
+    }
+    loadData();
+  }, []);
+
   const filteredInstruments = useMemo(() => {
     const query = search.trim().toLowerCase();
     return query
       ? instruments.filter((instrument) => instrument.toLowerCase().includes(query))
       : instruments;
-  }, [search]);
+  }, [instruments, search]);
 
   return (
     <section className="instruments-developed-directory" aria-label="NITRA instruments">
