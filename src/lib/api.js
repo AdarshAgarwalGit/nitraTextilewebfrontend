@@ -4,7 +4,7 @@
  */
 
 export const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+  process.env.NEXT_PUBLIC_API_URL || "https://api.nitratextile.org/api/v1";
 
 /**
  * Generic safe fetcher with timeout and error tolerance
